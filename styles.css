@@ -18,6 +18,7 @@
     font-family: Monaco, monospace; /* Use Monaco font */
     background-color: var(--background-color);
     color: var(--text-color);
+    scroll-behavior: smooth;        /* Smooth scrolling to sections */
   }
   
   /* NAVIGATION BAR */
@@ -27,6 +28,9 @@
     align-items: center;
     background-color: var(--primary-color);
     padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* keeps nav on top if you scroll */
   }
   
   .brand-title {
@@ -62,6 +66,7 @@
     align-items: center;
     background-color: var(--secondary-color);
     padding: 3rem 1rem;
+    margin-top: 0; /* ensures it's flush under the nav */
   }
   
   .hero-content {
@@ -89,26 +94,30 @@
     padding: 1rem;
   }
   
-  /* Headshot with a nice frame (not a circle) */
+  /* Headshot with a nice frame (bigger size) */
   .headshot {
-    width: 300px;
-    height: auto; /* Maintain aspect ratio */
+    width: 400px;         /* bigger headshot */
+    height: auto;         /* maintain aspect ratio */
     object-fit: cover;
   }
   
-  /* Optional "framed" class to apply a decorative border and shadow */
+  /* "framed" class for decorative border and shadow */
   .framed {
     border: 10px double var(--primary-color);
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* MAIN CONTENT (like on About page) */
-  .page-content {
+  /* SECTIONS */
+  .page-section {
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
     line-height: 1.6;
+  }
+  
+  .page-section h2 {
+    margin-top: 0;
   }
   
   /* FOOTER */
