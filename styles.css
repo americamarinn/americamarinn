@@ -33,7 +33,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
-    text-transform: uppercase; /* optional for style */
+    text-transform: uppercase; /* optional style */
   }
   
   .navbar-links {
@@ -64,7 +64,6 @@
     padding: 3rem 1rem;
   }
   
-  /* Hero text on the left side */
   .hero-content {
     flex: 1 1 50%;
     padding: 1rem;
@@ -72,13 +71,13 @@
   
   .hero-title {
     font-size: 2.5rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     color: var(--text-color);
   }
   
-  .intro-text {
-    line-height: 1.6;
+  .welcome-text {
     margin: 0;
+    font-size: 1.2rem;
   }
   
   /* Hero image on the right side */
@@ -90,12 +89,26 @@
     padding: 1rem;
   }
   
+  /* Headshot with a nice frame (not a circle) */
   .headshot {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
+  }
+  
+  /* Optional "framed" class to apply a decorative border and shadow */
+  .framed {
+    border: 10px double var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* MAIN CONTENT (like on About page) */
+  .page-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
   }
   
   /* FOOTER */
