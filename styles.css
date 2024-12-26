@@ -1,5 +1,5 @@
 /*
-  Pastel-Earthy Colors (customize as desired!)
+  Pastel-Earthy Colors (customize as desired)
 */
 :root {
     --primary-color: #8a9a5b;       /* Earthy green */
@@ -18,7 +18,7 @@
     font-family: Monaco, monospace; /* Use Monaco font */
     background-color: var(--background-color);
     color: var(--text-color);
-    scroll-behavior: smooth;        /* Smooth scrolling to sections */
+    scroll-behavior: smooth;        /* Smooth scrolling when using in-page links */
   }
   
   /* NAVIGATION BAR */
@@ -66,7 +66,6 @@
     align-items: center;
     background-color: var(--secondary-color);
     padding: 3rem 1rem;
-    margin-top: 0; /* ensures it's flush under the nav */
   }
   
   .hero-content {
@@ -81,8 +80,23 @@
   }
   
   .welcome-text {
-    margin: 0;
+    margin: 0 0 1rem;
     font-size: 1.2rem;
+  }
+  
+  /* Toggle button styling */
+  .toggle-button {
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .toggle-button:hover {
+    opacity: 0.9;
   }
   
   /* Hero image on the right side */
@@ -96,8 +110,8 @@
   
   /* Headshot with a nice frame (bigger size) */
   .headshot {
-    width: 400px;         /* bigger headshot */
-    height: auto;         /* maintain aspect ratio */
+    width: 400px; /* bigger headshot */
+    height: auto; /* maintain aspect ratio */
     object-fit: cover;
   }
   

@@ -24,6 +24,9 @@
     <div class="hero-content">
       <h1 class="hero-title">América Marín Reyes</h1>
       <p class="welcome-text">Welcome!</p>
+
+      <!-- Toggle button that scrolls to the About section -->
+      <button id="toggleAbout" class="toggle-button">Learn More About Me</button>
     </div>
 
     <!-- Right side: Headshot with a nice frame (bigger size) -->
@@ -56,10 +59,9 @@
   <section id="portfolio" class="page-section">
     <h2>Portfolio</h2>
     <p>
-      Here is where I’ll showcase my projects and accomplishments.  
-      <!-- Add a link or embed your résumé here -->
+      Here is where I’ll showcase my projects and accomplishments.
       <br><br>
-      <strong>Résumé:</strong> <em>(Coming soon or link to PDF...)</em>
+      <strong>Résumé:</strong> <em>(Put your PDF link or embed here...)</em>
     </p>
   </section>
 
@@ -78,5 +80,13 @@
   <footer class="footer">
     <p>&copy; 2024 América Marín Reyes. All rights reserved.</p>
   </footer>
+
+  <!-- Optional JavaScript for "toggle" scroll behavior -->
+  <script>
+    // When the button is clicked, smoothly scroll to the "about" section
+    document.getElementById('toggleAbout').addEventListener('click', function() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
