@@ -23,8 +23,8 @@ body {
   font-family: Monaco, monospace; /* Use Monaco font */
   background-color: var(--background-color);
   color: var(--text-color);
-  scroll-behavior: smooth;        /* Smooth scrolling for in-page links */
-  min-height: 100vh;              /* Ensure background covers full screen height */
+  scroll-behavior: smooth; /* Smooth scrolling for in-page links */
+  min-height: 100vh;       /* Ensure background covers full screen height */
 }
 
 /* NAVIGATION BAR */
@@ -84,11 +84,6 @@ body {
   color: var(--text-color);
 }
 
-.welcome-text {
-  margin: 0 0 1.5rem;
-  font-size: 1.2rem;
-}
-
 .toggle-button {
   padding: 0.85rem 1.2rem;
   font-size: 1rem;
@@ -100,7 +95,6 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s ease;
 }
-
 .toggle-button:hover {
   transform: scale(1.05);
   opacity: 0.9;
@@ -139,7 +133,21 @@ body {
   margin-top: 0;
 }
 
-/* CONTACT & FOOTER */
+/* ABOUT SECTION: Oval image */
+.oval-image-container {
+  margin-top: 2rem;
+}
+.oval-image {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%; /* creates an oval or circle shape */
+  border: 8px double var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
 .footer {
   background-color: var(--primary-color);
   color: #fff;
@@ -147,20 +155,34 @@ body {
   padding: 1rem;
 }
 
-/* GALLERY SECTION */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+/* HORIZONTAL SCROLL GALLERY (ART & DESIGN) */
+.horizontal-scroll {
+  white-space: nowrap; /* keeps items in a horizontal line */
+  overflow-x: auto;    /* horizontal scroll if items overflow */
+  padding: 1rem 0;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px; /* a bit larger so user can see it */
+}
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #ddd; /* track color */
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* slider thumb color */
+  border-radius: 4px;
 }
 
+/* GALLERY ITEMS (works for both grid & horizontal) */
 .gallery-item {
   position: relative;
   cursor: pointer;
   overflow: hidden;
   border: 2px solid var(--primary-color);
   border-radius: 10px;
+  width: 250px; /* fixed width so items line up horizontally */
+  display: inline-block; /* so they align horizontally in .horizontal-scroll */
+  margin-right: 1rem;    /* spacing between items */
+  vertical-align: top;
 }
 
 .gallery-item img,
@@ -170,7 +192,7 @@ body {
   display: block;
 }
 
-/* Overlay for hover effect */
+/* Overlays */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -182,15 +204,22 @@ body {
   transform: translateY(100%);
   transition: transform 0.4s ease;
 }
-
 .gallery-item:hover .overlay {
   transform: translateY(0);
+}
+
+/* Grid layout for leftover or optional items */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 /* MODAL STYLES */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: fixed;
   z-index: 2000; /* Sit on top */
   left: 0;
   top: 0;
@@ -200,7 +229,6 @@ body {
   background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
-/* Modal Content (image/video) */
 .modal-content {
   display: block;
   margin: 5% auto;
@@ -209,7 +237,6 @@ body {
   border-radius: 10px;
 }
 
-/* Caption text */
 .modal-caption {
   text-align: center;
   color: #fff;
@@ -228,7 +255,6 @@ body {
   cursor: pointer;
   z-index: 3000;
 }
-
 .close:hover {
   color: #ccc;
 }
