@@ -13,6 +13,8 @@
     <ul class="navbar-links">
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <!-- NEW Art & Design link in navigation -->
+      <li><a href="#art-design">Art &amp; Design</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -23,12 +25,11 @@
     <div class="hero-content">
       <h1 class="hero-title">América Marín Reyes</h1>
       <p class="welcome-text">Welcome!</p>
-
       <!-- Button that scrolls to the About section -->
       <button id="toggleAbout" class="toggle-button">Learn More About Me</button>
     </div>
 
-    <!-- Right side: Headshot (replace 'headshot.jpg' with your own image) -->
+    <!-- Right side: Headshot -->
     <div class="hero-image">
       <img
         src="headshot.heic"
@@ -63,13 +64,52 @@
     <p>
       Here is where I’ll showcase my projects and accomplishments.
     </p>
-    <!-- Link to your PDF résumé. Replace 'resume.pdf' with your actual file name -->
+    <!-- Update your PDF résumé link below -->
     <p>
       <strong>Résumé:</strong>
       <a href="cs- America Résumé 24.pdf" target="_blank" rel="noopener noreferrer">
         View or Download My Résumé
       </a>
     </p>
+    <!-- You can also embed your résumé text or add direct copy here if you prefer -->
+  </section>
+
+  <!-- NEW: ART & DESIGN GALLERY SECTION -->
+  <section id="art-design" class="page-section">
+    <h2>Art &amp; Design</h2>
+    <p>
+      Below is a collection of my favorite art pieces and graphic design work.
+      Hover over an image or video to enlarge it.
+    </p>
+
+    <!-- Gallery Grid Container -->
+    <div class="gallery-grid">
+      <!-- Example Image Item -->
+      <div class="gallery-item" onclick="openModal('artModal1')">
+        <img src="path/to/your-art-1.jpg" alt="Art Piece 1" />
+        <div class="overlay">
+          <p>Art Piece Title 1</p>
+        </div>
+      </div>
+
+      <!-- Another Image Item -->
+      <div class="gallery-item" onclick="openModal('artModal2')">
+        <img src="path/to/your-art-2.jpg" alt="Art Piece 2" />
+        <div class="overlay">
+          <p>Art Piece Title 2</p>
+        </div>
+      </div>
+
+      <!-- Example Video Clip -->
+      <div class="gallery-item" onclick="openModal('videoModal1')">
+        <video src="path/to/your-art-clip.mp4" muted></video>
+        <div class="overlay">
+          <p>Short Clip or Animation</p>
+        </div>
+      </div>
+
+      <!-- Add more images/videos as needed -->
+    </div>
   </section>
 
   <!-- CONTACT SECTION -->
@@ -85,6 +125,12 @@
         href="https://www.linkedin.com/in/america-marin-65b5b5297"
         target="_blank"
         >america-marin-65b5b5297</a
+      ><br />
+      Website:
+      <a
+        href="https://americamarinn.github.io/americamarinn/"
+        target="_blank"
+        >americamarinn.github.io</a
       >
     </p>
   </section>
@@ -100,6 +146,41 @@
     document.getElementById('toggleAbout').addEventListener('click', function() {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     });
+
+    // Simple modal/lightbox functionality
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
   </script>
+
+  <!-- MODAL SECTIONS (One modal per image/video) -->
+  <!-- You can replicate these for each image/video in the gallery -->
+
+  <!-- Example Modal 1 (Art Piece 1) -->
+  <div id="artModal1" class="modal">
+    <span class="close" onclick="closeModal('artModal1')">&times;</span>
+    <img class="modal-content" src="path/to/your-art-1.jpg" alt="Art Piece 1" />
+    <div class="modal-caption">Art Piece 1 - Caption or description</div>
+  </div>
+
+  <!-- Example Modal 2 (Art Piece 2) -->
+  <div id="artModal2" class="modal">
+    <span class="close" onclick="closeModal('artModal2')">&times;</span>
+    <img class="modal-content" src="path/to/your-art-2.jpg" alt="Art Piece 2" />
+    <div class="modal-caption">Art Piece 2 - Caption or description</div>
+  </div>
+
+  <!-- Example Modal for video -->
+  <div id="videoModal1" class="modal">
+    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
+    <video class="modal-content" controls>
+      <source src="path/to/your-art-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="modal-caption">Art Clip - Some details about this video</div>
+  </div>
 </body>
 </html>
