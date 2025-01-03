@@ -2,268 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>América Marín Reyes</title>
-
-  <!-- Link to external CSS file -->
+  <title>América Marín Reyes - Home</title>
+  <!-- Link to your external CSS file -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Google Font for a modern look (Inter). Adjust weights & styles if you prefer another font. -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
 </head>
 <body>
-  <!-- NAVIGATION BAR -->
+  <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="nav-brand">América Marín Reyes</div>
-    <ul class="nav-links">
+    <div class="brand-title">América Marín Reyes</div>
+    <ul class="navbar-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <!-- NEW Art & Design link in navigation -->
+      <li><a href="#art-design">Art &amp; Design</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- Hero / Header Section -->
   <header class="hero">
-    <div class="hero-container">
-      <div class="hero-text">
-        <h1>Hola! I'm América Marín</h1>
-        <p class="hero-subtitle">a Developer and Designer</p>
-        <p class="hero-paragraph">
-          Welcome to my personal website! I’m a student at Brown University,
-          exploring the intersection of Computer Science, Linguistic
-          Anthropology, and Graphic Design.
-        </p>
-        <div class="hero-cta">
-          <a href="#about" class="btn-primary">Learn More About Me</a>
-        </div>
-      </div>
-      <!-- Placeholder for hero image or video -->
-      <div class="hero-media">
-        <img
-          src="https://via.placeholder.com/450x300"
-          alt="Placeholder for hero media"
-        />
-        <!-- If you prefer a video in the hero, replace <img> with a <video>:
-        
-        <video controls width="100%">
-          <source src="path/to/hero-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        -->
-      </div>
+    <!-- Left side: Name & Welcome -->
+    <div class="hero-content">
+      <h1 class="hero-title">América Marín Reyes</h1>
+      <p class="welcome-text">Welcome!</p>
+      <!-- Button that scrolls to the About section -->
+      <button id="toggleAbout" class="toggle-button">Learn More About Me</button>
+    </div>
+
+    <!-- Right side: Headshot -->
+    <div class="hero-image">
+      <img
+        src="headshot.heic"
+        alt="Headshot of América"
+        class="headshot framed"
+      />
     </div>
   </header>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="section">
-    <div class="section-heading">
-      <h2>About Me</h2>
-    </div>
-    <div class="section-content">
-      <!-- Placeholder for About image or short clip on the left -->
-      <div class="about-media">
-        <img
-          src="https://via.placeholder.com/300x400"
-          alt="Placeholder image for About"
-        />
-      </div>
-      <div class="about-text">
-        <p>
-          I'm América, a third-year student at Brown University studying
-          Computer Science and (Linguistic) Anthropology BA. My passion lies in
-          software development, graphic design, and using my skills to uplift
-          communities through technology and art.
-        </p>
-        <p>
-          I also engage in research on Latine and Indigenous identity, focusing
-          on how language and culture intersect with technology. I'm
-          continuously expanding my design skills and creative projects to make
-          a positive impact!
-        </p>
-      </div>
-    </div>
+  <section id="about" class="page-section">
+    <h2>About Me</h2>
+    <p>
+      Hello and welcome! This is my personal website where I share a bit about
+      myself, my work, and my interests. My name is América Marín Reyes, and I
+      am currently a third-year student at Brown University studying Computer
+      Science and (Linguistic) Anthropology BA. I demonstrate a profound
+      interest in utilizing software and graphic design skills as catalysts
+      for societal transformation.
+    </p>
+    <p>
+      I also engage in rigorous research endeavors pertaining to Latine and
+      Indigenous identity, reflecting my dedication to scholarly exploration.
+      Furthermore, I display a passion for linguistic acquisition and its
+      pragmatic application within professional spheres.
+    </p>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="section alt-bg">
-    <div class="section-heading">
-      <h2>Projects</h2>
-      <p class="section-subtitle">
-        Below are some of my favorite projects showcasing design and software
-        skills.
-      </p>
-    </div>
-
-    <div class="projects-grid">
-      <!-- PROJECT 1 -->
-      <div class="project-item">
-        <img
-          src="https://via.placeholder.com/400x250"
-          alt="Project 1 placeholder"
-        />
-        <div class="project-info">
-          <h3>Project Title 1</h3>
-          <p>
-            Brief description of the project. Could be a React web app, a
-            nonprofit website, or an art piece...
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/" target="_blank" rel="noopener"
-              >GitHub</a
-            >
-            <a href="#" target="_blank" rel="noopener">Live Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECT 2 -->
-      <div class="project-item">
-        <img
-          src="https://via.placeholder.com/400x250"
-          alt="Project 2 placeholder"
-        />
-        <div class="project-info">
-          <h3>Project Title 2</h3>
-          <p>
-            Another short description. Perhaps an eCommerce store or mobile app
-            that you created or helped design.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/" target="_blank" rel="noopener"
-              >GitHub</a
-            >
-            <a href="#" target="_blank" rel="noopener">Website</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECT 3 -->
-      <div class="project-item">
-        <img
-          src="https://via.placeholder.com/400x250"
-          alt="Project 3 placeholder"
-        />
-        <div class="project-info">
-          <h3>Project Title 3</h3>
-          <p>
-            A third project or art piece. Maybe an award-winning project for
-            a hackathon or a design portfolio.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/" target="_blank" rel="noopener"
-              >GitHub</a
-            >
-            <a href="#" target="_blank" rel="noopener">Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="page-section">
+    <h2>Portfolio</h2>
+    <p>
+      Here is where I’ll showcase my projects and accomplishments.
+    </p>
+    <!-- Update your PDF résumé link below -->
+    <p>
+      <strong>Résumé:</strong>
+      <a href="cs- America Résumé 24.pdf" target="_blank" rel="noopener noreferrer">
+        View or Download My Résumé
+      </a>
+    </p>
+    <!-- You can also embed your résumé text or add direct copy here if you prefer -->
   </section>
 
-  <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="section">
-    <div class="section-heading">
-      <h2>Experience</h2>
-      <p class="section-subtitle">
-        My background in software development, research, and design.
-      </p>
-    </div>
-    <div class="experience-content">
-      <!-- EXPERIENCE HIGHLIGHT 1 -->
-      <div class="experience-item">
-        <h3>StudBud, Co-Founder</h3>
-        <p><strong>December 2024 – Present</strong></p>
-        <ul>
-          <li>
-            Spearheaded marketing initiatives, user recruitment, and strategic
-            partnerships to expand StudBud’s reach among college campuses.
-          </li>
-          <li>
-            Architected and implemented backend functionalities for user
-            authentication, real-time messaging, and data storage.
-          </li>
-        </ul>
+  <!-- NEW: ART & DESIGN GALLERY SECTION -->
+  <section id="art-design" class="page-section">
+    <h2>Art &amp; Design</h2>
+    <p>
+      Below is a collection of my favorite art pieces and graphic design work.
+      Hover over an image or video to enlarge it.
+    </p>
+
+    <!-- Gallery Grid Container -->
+    <div class="gallery-grid">
+      <!-- Example Image Item -->
+      <div class="gallery-item" onclick="openModal('artModal1')">
+        <img src="path/to/your-art-1.jpg" alt="Art Piece 1" />
+        <div class="overlay">
+          <p>Art Piece Title 1</p>
+        </div>
       </div>
 
-      <!-- EXPERIENCE HIGHLIGHT 2 -->
-      <div class="experience-item">
-        <h3>Undergraduate Teaching Assistant @ Brown CS</h3>
-        <p><strong>December 2024 – Present</strong></p>
-        <ul>
-          <li>
-            Provided academic support through office hours, discussion board
-            responses, and small-group section facilitation.
-          </li>
-          <li>
-            Assisted with course preparation, assignment updates, grading
-            rubrics, and writing solutions/test suites.
-          </li>
-        </ul>
+      <!-- Another Image Item -->
+      <div class="gallery-item" onclick="openModal('artModal2')">
+        <img src="path/to/your-art-2.jpg" alt="Art Piece 2" />
+        <div class="overlay">
+          <p>Art Piece Title 2</p>
+        </div>
       </div>
-    </div>
 
-    <!-- OPTIONAL: ADD MORE EXPERIENCE ITEMS HERE -->
+      <!-- Example Video Clip -->
+      <div class="gallery-item" onclick="openModal('videoModal1')">
+        <video src="path/to/your-art-clip.mp4" muted></video>
+        <div class="overlay">
+          <p>Short Clip or Animation</p>
+        </div>
+      </div>
 
-    <!-- RÉSUMÉ LINK (easier to just link after highlights) -->
-    <div class="resume-link">
-      <a
-        href="america_marin_resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-primary"
-        >View or Download My Full Résumé</a
-      >
-      <!-- Or embed an iframe with your PDF if you prefer:
-      <iframe
-        src="america_marin_resume.pdf"
-        width="100%"
-        height="600"
-        style="border:none;"
-      ></iframe>
-      -->
+      <!-- Add more images/videos as needed -->
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="section alt-bg">
-    <div class="section-heading">
-      <h2>Get in Touch</h2>
-      <p class="section-subtitle">
-        I'm always open to opportunities, collaborations, and new ideas.
-      </p>
-    </div>
-    <div class="contact-content">
-      <p>
-        <strong>América Marín</strong><br />
-        Phone: (619) 855-4707<br />
-        E-mail:
-        <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br />
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/america-marin-65b5b5297"
-          target="_blank"
-          rel="noopener"
-          >america-marin-65b5b5297</a
-        ><br />
-        Website:
-        <a
-          href="https://americamarinn.github.io/americamarinn/"
-          target="_blank"
-          rel="noopener"
-          >americamarinn.github.io</a
-        >
-      </p>
-    </div>
+  <section id="contact" class="page-section">
+    <h2>Contact</h2>
+    <p>
+      <strong>América Marín</strong><br />
+      Phone: (619) 855-4707<br />
+      E-mail:
+      <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br />
+      LinkedIn:
+      <a
+        href="https://www.linkedin.com/in/america-marin-65b5b5297"
+        target="_blank"
+        >america-marin-65b5b5297</a
+      ><br />
+      Website:
+      <a
+        href="https://americamarinn.github.io/americamarinn/"
+        target="_blank"
+        >americamarinn.github.io</a
+      >
+    </p>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 América Marín Reyes. All rights reserved.</p>
+    <p>&copy; 2024 América Marín Reyes. All rights reserved.</p>
   </footer>
 
+  <!-- JavaScript for "toggle" scroll behavior -->
+  <script>
+    // Smoothly scroll to the "about" section when the button is clicked
+    document.getElementById('toggleAbout').addEventListener('click', function() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Simple modal/lightbox functionality
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+  </script>
+
+  <!-- MODAL SECTIONS (One modal per image/video) -->
+  <!-- You can replicate these for each image/video in the gallery -->
+
+  <!-- Example Modal 1 (Art Piece 1) -->
+  <div id="artModal1" class="modal">
+    <span class="close" onclick="closeModal('artModal1')">&times;</span>
+    <img class="modal-content" src="path/to/your-art-1.jpg" alt="Art Piece 1" />
+    <div class="modal-caption">Art Piece 1 - Caption or description</div>
+  </div>
+
+  <!-- Example Modal 2 (Art Piece 2) -->
+  <div id="artModal2" class="modal">
+    <span class="close" onclick="closeModal('artModal2')">&times;</span>
+    <img class="modal-content" src="path/to/your-art-2.jpg" alt="Art Piece 2" />
+    <div class="modal-caption">Art Piece 2 - Caption or description</div>
+  </div>
+
+  <!-- Example Modal for video -->
+  <div id="videoModal1" class="modal">
+    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
+    <video class="modal-content" controls>
+      <source src="path/to/your-art-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="modal-caption">Art Clip - Some details about this video</div>
+  </div>
 </body>
 </html>
