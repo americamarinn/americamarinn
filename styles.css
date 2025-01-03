@@ -1,6 +1,7 @@
 /*
-  Colors (customize as desired!)
-  This set aims for a light brown/cream page background.
+======================================
+  0. GLOBAL STYLES & VARIABLES
+======================================
 */
 :root {
   /* Earthy green accent or your choice */
@@ -11,23 +12,38 @@
   --background-color: #f0e6da;
   /* Dark text color */
   --text-color: #333;
+  /* You can add more color variables if desired for decorations */
 }
 
-/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: Monaco, monospace; /* Use Monaco font */
+  font-family: Monaco, monospace; /* or your preferred font */
   background-color: var(--background-color);
   color: var(--text-color);
-  scroll-behavior: smooth;        /* Smooth scrolling for in-page links */
-  min-height: 100vh;              /* Ensure background covers full screen height */
+  scroll-behavior: smooth; /* Smooth scrolling for in-page links */
+  min-height: 100vh;
+  position: relative;
 }
 
-/* NAVIGATION BAR */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+/*
+======================================
+  1. NAVIGATION BAR
+======================================
+*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -36,7 +52,7 @@ body {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 1000; /* keeps nav on top if you scroll */
+  z-index: 1000; /* ensures nav stays on top when scrolling */
 }
 
 .brand-title {
@@ -64,31 +80,58 @@ body {
   opacity: 0.8;
 }
 
-/* HERO SECTION */
-.hero {
+/*
+======================================
+  2. SECTION LAYOUT (Alternating)
+======================================
+*/
+.section-layout {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* so it’s responsive on smaller screens */
+  max-width: 1100px; 
+  margin: 0 auto;    /* center the container */
   padding: 4rem 2rem;
+  position: relative; /* for decorations to be positioned absolutely if needed */
 }
 
-.hero-content {
-  text-align: center;
+/* Normal: text on left, image on right */
+.section-text {
+  flex: 1;
+  text-align: left;
+  min-width: 300px;
+}
+.section-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
 }
 
-.hero-title {
-  font-size: 2.8rem;
-  margin: 0 0 1rem;
-  color: var(--text-color);
+/* Reverse the order for every other section */
+.reverse-layout {
+  flex-direction: row-reverse;
+}
+.reverse-layout .section-text {
+  text-align: right;
 }
 
-.welcome-text {
-  margin: 0 0 1.5rem;
-  font-size: 1.2rem;
+/*
+======================================
+  3. HERO (Header) Section
+======================================
+*/
+.hero .hero-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
-
+.hero .hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
 .toggle-button {
   padding: 0.85rem 1.2rem;
   font-size: 1rem;
@@ -100,61 +143,68 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s ease;
 }
-
 .toggle-button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* Hero image (headshot) */
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*
+======================================
+  4. POLAROID-STYLE IMAGE
+======================================
+*/
+.polaroid-frame {
+  display: inline-block; /* keep it sized to content */
+  background-color: #fff; /* white background for the Polaroid */
+  padding: 1rem 1rem 1.5rem; /* extra bottom space for the Polaroid style */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* slight rotation for polaroid “feel” (optional) */
+  transform: rotate(-2deg);
+  margin: 1rem;
 }
-
-.headshot {
-  width: 600px;
-  max-width: 90%;
+.polaroid-frame img {
+  width: 230px; /* or your desired size */
   height: auto;
+  display: block;
   object-fit: cover;
 }
-
-.framed {
-  border: 10px double var(--primary-color);
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* SECTIONS */
-.page-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  line-height: 1.6;
+.polaroid-caption {
+  font-size: 0.9rem;
+  color: #666;
   text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic; /* optional style */
 }
 
+/*
+======================================
+  5. SPECIFIC SECTION STYLES
+======================================
+*/
 .page-section h2 {
-  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+/* narrower text paragraphs for better reading */
+.section-text p {
+  max-width: 500px;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-/* CONTACT & FOOTER */
-.footer {
-  background-color: var(--primary-color);
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* GALLERY SECTION */
+/*
+======================================
+  6. GALLERY (Example for Art & Design)
+======================================
+*/
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
 }
-
 .gallery-item {
   position: relative;
   cursor: pointer;
@@ -162,14 +212,12 @@ body {
   border: 2px solid var(--primary-color);
   border-radius: 10px;
 }
-
 .gallery-item img,
 .gallery-item video {
   width: 100%;
   height: auto;
   display: block;
 }
-
 /* Overlay for hover effect */
 .overlay {
   position: absolute;
@@ -182,12 +230,28 @@ body {
   transform: translateY(100%);
   transition: transform 0.4s ease;
 }
-
 .gallery-item:hover .overlay {
   transform: translateY(0);
 }
 
-/* MODAL STYLES */
+/*
+======================================
+  7. CONTACT & FOOTER
+======================================
+*/
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/*
+======================================
+  8. MODALS (Optional)
+======================================
+*/
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -199,8 +263,6 @@ body {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
-
-/* Modal Content (image/video) */
 .modal-content {
   display: block;
   margin: 5% auto;
@@ -208,16 +270,12 @@ body {
   border: 5px double var(--primary-color);
   border-radius: 10px;
 }
-
-/* Caption text */
 .modal-caption {
   text-align: center;
   color: #fff;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
-
-/* Close Button (X) */
 .close {
   position: absolute;
   top: 2rem;
@@ -228,7 +286,28 @@ body {
   cursor: pointer;
   z-index: 3000;
 }
-
 .close:hover {
   color: #ccc;
+}
+
+/*
+======================================
+  9. MAXIMALIST DECORATIONS (Examples)
+======================================
+*/
+/* For sections that have a background image or texture */
+.with-background {
+  background: url('path/to/your-earthy-graphic.png') no-repeat center/cover;
+}
+
+/* Example of a decorative leaf or shape in the corner */
+.decor-leaf {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: url('path/to/your-leaf-graphic.png') no-repeat center/contain;
+  top: -40px; 
+  left: -40px;
+  opacity: 0.7;
+  z-index: 0; 
 }

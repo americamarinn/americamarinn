@@ -2,151 +2,209 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>América Marín Reyes - Home</title>
-  <!-- Link to your external CSS file -->
-  <link rel="stylesheet" href="styles.css" />
+  <title>América Marín Reyes - New Layout</title>
+  <!-- Link to your CSS file (if using an external file) -->
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- ============= NAVIGATION BAR ============= -->
   <nav class="navbar">
     <div class="brand-title">América Marín Reyes</div>
     <ul class="navbar-links">
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <!-- NEW Art & Design link in navigation -->
       <li><a href="#art-design">Art &amp; Design</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero / Header Section -->
-  <header class="hero">
-    <!-- Left side: Name & Welcome -->
-    <div class="hero-content">
+  <!-- ============= HERO SECTION ============= -->
+  <!-- Text on left, Headshot on right -->
+  <header class="hero section-layout">
+    <!-- TEXT -->
+    <div class="section-text">
       <h1 class="hero-title">América Marín Reyes</h1>
       <p class="hero-subtitle">
         Bridging the worlds of technology and creativity, 
         I explore the intersection of design, software, and identity.
       </p>
-      <!-- Button that scrolls to the About section -->
       <button id="toggleAbout" class="toggle-button">Learn More About Me</button>
     </div>
 
-    <!-- Right side: Headshot -->
-    <div class="hero-image">
+    <!-- IMAGE -->
+    <div class="section-image hero-image">
       <img
         src="headshot.heic"
         alt="Headshot of América"
-        class="headshot framed"
+        class="headshot"
+        style="width: 400px; border: 10px double var(--primary-color); border-radius: 15px;"
       />
     </div>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="page-section">
-    <h2>About Me</h2>
-    <p>
-      Hello and welcome! This is my personal website where I share a bit about
-      myself, my work, and my interests. My name is América Marín Reyes, and I
-      am currently a third-year student at Brown University studying Computer
-      Science and (Linguistic) Anthropology BA. I demonstrate a profound
-      interest in utilizing software and graphic design skills as catalysts
-      for societal transformation.
-    </p>
-    <p>
-      I also engage in rigorous research endeavors pertaining to Latine and
-      Indigenous identity, reflecting my dedication to scholarly exploration.
-      Furthermore, I display a passion for linguistic acquisition and its
-      pragmatic application within professional spheres.
-    </p>
-  </section>
+  <!-- ============= ABOUT SECTION (reversed) ============= -->
+  <!-- Reverse layout: text on right, polaroid image on left -->
+  <section id="about" class="page-section section-layout reverse-layout with-background">
+    <!-- OPTIONAL: A decorative leaf in the corner (maximalist flair) -->
+    <div class="decor-leaf"></div>
 
-  <!-- PORTFOLIO SECTION -->
-  <section id="portfolio" class="page-section">
-    <h2>Portfolio</h2>
-    <p>
-      Here is where I’ll showcase my projects and accomplishments.
-    </p>
-    <!-- Update your PDF résumé link below -->
-    <p>
-      <strong>Résumé:</strong>
-      <a href="cs- America Résumé 24.pdf" target="_blank" rel="noopener noreferrer">
-        View or Download My Résumé
-      </a>
-    </p>
-    <!-- You can also embed your résumé text or add direct copy here if you prefer -->
-  </section>
+    <div class="section-text">
+      <h2>About Me</h2>
+      <p>
+        Hello and welcome! This is my personal website where I share a bit about
+        myself, my work, and my interests. My name is América Marín Reyes, and I
+        am currently a third-year student at Brown University studying Computer
+        Science and (Linguistic) Anthropology BA.
+      </p>
+      <p>
+        I demonstrate a profound interest in utilizing software and graphic design 
+        skills as catalysts for societal transformation. I also engage in 
+        rigorous research endeavors pertaining to Latine and Indigenous identity, 
+        reflecting my dedication to scholarly exploration.
+      </p>
+    </div>
 
-  <!-- NEW: ART & DESIGN GALLERY SECTION -->
-  <section id="art-design" class="page-section">
-    <h2>Art &amp; Design</h2>
-    <p>
-      América is a Fronteriza from San Diego, California, and the daughter of Mexican immigrants from Veracruz and Tamaulipas, Mexico. Her art delves into themes of gender fluidity and embodiment, reflecting unique non-binary humanoids in layered watercolor and gouache. Through her work, América demonstrates the beauty of fluidity and identity.
-    </p>
-    <p>
-      Below is a collection of my favorite art pieces and graphic design work.
-      Hover over an image or video to enlarge it.
-    </p>
-
-    <!-- Gallery Grid Container -->
-    <div class="gallery-grid">
-      <!-- Example Image Item -->
-      <div class="gallery-item" onclick="openModal('artModal1')">
-        <img src="path/to/your-art-1.jpg" alt="Art Piece 1" />
-        <div class="overlay">
-          <p>Art Piece Title 1</p>
-        </div>
+    <div class="section-image">
+      <div class="polaroid-frame">
+        <img src="path/to/polaroid-image.jpg" alt="Photo of América" />
+        <div class="polaroid-caption">A fun memory!</div>
       </div>
-
-      <!-- Another Image Item -->
-      <div class="gallery-item" onclick="openModal('artModal2')">
-        <img src="path/to/your-art-2.jpg" alt="Art Piece 2" />
-        <div class="overlay">
-          <p>Art Piece Title 2</p>
-        </div>
-      </div>
-
-      <!-- Example Video Clip -->
-      <div class="gallery-item" onclick="openModal('videoModal1')">
-        <video src="path/to/your-art-clip.mp4" muted></video>
-        <div class="overlay">
-          <p>Short Clip or Animation</p>
-        </div>
-      </div>
-
-      <!-- Add more images/videos as needed -->
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="page-section">
-    <h2>Contact</h2>
-    <p>
-      <strong>América Marín</strong><br />
-      Phone: (619) 855-4707<br />
-      E-mail:
-      <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br />
-      LinkedIn:
-      <a
-        href="https://www.linkedin.com/in/america-marin-65b5b5297"
-        target="_blank"
-        >america-marin-65b5b5297</a
-      ><br />
-      Website:
-      <a
-        href="https://americamarinn.github.io/americamarinn/"
-        target="_blank"
-        >americamarinn.github.io</a
-      >
-    </p>
+  <!-- ============= PORTFOLIO SECTION (normal) ============= -->
+  <!-- Normal layout: text on left, portfolio image (or blank) on right -->
+  <section id="portfolio" class="page-section section-layout">
+    <div class="section-text">
+      <h2>Portfolio</h2>
+      <p>
+        Here is where I’ll showcase my projects and accomplishments.
+      </p>
+      <p>
+        <strong>Résumé:</strong>
+        <a href="path/to/your-resume.pdf" target="_blank" rel="noopener noreferrer">
+          View or Download My Résumé
+        </a>
+      </p>
+    </div>
+
+    <div class="section-image">
+      <!-- Placeholder: a screenshot or a decorative illustration -->
+      <img 
+        src="path/to/portfolio-placeholder.jpg" 
+        alt="My portfolio preview" 
+        style="max-width: 300px;"
+      />
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ============= ART & DESIGN SECTION (reversed) ============= -->
+  <section id="art-design" class="page-section section-layout reverse-layout">
+    <div class="section-text">
+      <h2>Art &amp; Design</h2>
+      <p>
+        América is a Fronteriza from San Diego, California, and the daughter of Mexican 
+        immigrants from Veracruz and Tamaulipas, Mexico. Her art delves into themes of 
+        gender fluidity and embodiment, reflecting unique non-binary humanoids in layered 
+        watercolor and gouache. Through her work, América demonstrates the beauty of 
+        fluidity and identity.
+      </p>
+      <p>
+        Below is a collection of my favorite art pieces and graphic design work.
+        Hover over an image or video to enlarge it.
+      </p>
+    </div>
+
+    <div class="section-image">
+      <!-- Example Gallery Grid -->
+      <div class="gallery-grid" style="max-width:500px;">
+        <!-- Example Image Item -->
+        <div class="gallery-item" onclick="openModal('artModal1')">
+          <img src="path/to/your-art-1.jpg" alt="Art Piece 1" />
+          <div class="overlay">
+            <p>Art Piece Title 1</p>
+          </div>
+        </div>
+        <!-- Another Image Item -->
+        <div class="gallery-item" onclick="openModal('artModal2')">
+          <img src="path/to/your-art-2.jpg" alt="Art Piece 2" />
+          <div class="overlay">
+            <p>Art Piece Title 2</p>
+          </div>
+        </div>
+        <!-- Example Video Clip -->
+        <div class="gallery-item" onclick="openModal('videoModal1')">
+          <video src="path/to/your-art-clip.mp4" muted></video>
+          <div class="overlay">
+            <p>Short Clip or Animation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CONTACT SECTION (normal) ============= -->
+  <section id="contact" class="page-section section-layout">
+    <div class="section-text">
+      <h2>Contact</h2>
+      <p>
+        <strong>América Marín</strong><br>
+        Phone: (619) 855-4707<br>
+        E-mail: 
+        <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br>
+        LinkedIn: 
+        <a href="https://www.linkedin.com/in/america-marin-65b5b5297" target="_blank">
+          america-marin-65b5b5297
+        </a><br>
+        Website:
+        <a href="https://americamarinn.github.io/americamarinn/" target="_blank">
+          americamarinn.github.io
+        </a>
+      </p>
+    </div>
+
+    <div class="section-image">
+      <!-- Could add a decorative or relevant image here -->
+      <img 
+        src="path/to/contact-decor.jpg" 
+        alt="Contact decoration" 
+        style="max-width: 300px;"
+      />
+    </div>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
   <footer class="footer">
     <p>&copy; 2024 América Marín Reyes. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for "toggle" scroll behavior -->
+  <!-- Optional: If using an external JS file, link it here -->
+  <!-- <script src="script.js"></script> -->
+
+  <!-- ============= MODAL EXAMPLES ============= -->
+  <div id="artModal1" class="modal">
+    <span class="close" onclick="closeModal('artModal1')">&times;</span>
+    <img class="modal-content" src="path/to/your-art-1.jpg" alt="Art Piece 1" />
+    <div class="modal-caption">Art Piece 1 - Caption or description</div>
+  </div>
+
+  <div id="artModal2" class="modal">
+    <span class="close" onclick="closeModal('artModal2')">&times;</span>
+    <img class="modal-content" src="path/to/your-art-2.jpg" alt="Art Piece 2" />
+    <div class="modal-caption">Art Piece 2 - Caption or description</div>
+  </div>
+
+  <div id="videoModal1" class="modal">
+    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
+    <video class="modal-content" controls>
+      <source src="path/to/your-art-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="modal-caption">Art Clip - Some details about this video</div>
+  </div>
+
+  <!-- ============= OPTIONAL INLINE SCRIPT ============= -->
   <script>
     // Smoothly scroll to the "about" section when the button is clicked
     document.getElementById('toggleAbout').addEventListener('click', function() {
@@ -162,31 +220,5 @@
     }
   </script>
 
-  <!-- MODAL SECTIONS (One modal per image/video) -->
-  <!-- You can replicate these for each image/video in the gallery -->
-
-  <!-- Example Modal 1 (Art Piece 1) -->
-  <div id="artModal1" class="modal">
-    <span class="close" onclick="closeModal('artModal1')">&times;</span>
-    <img class="modal-content" src="path/to/your-art-1.jpg" alt="Art Piece 1" />
-    <div class="modal-caption">Art Piece 1 - Caption or description</div>
-  </div>
-
-  <!-- Example Modal 2 (Art Piece 2) -->
-  <div id="artModal2" class="modal">
-    <span class="close" onclick="closeModal('artModal2')">&times;</span>
-    <img class="modal-content" src="path/to/your-art-2.jpg" alt="Art Piece 2" />
-    <div class="modal-caption">Art Piece 2 - Caption or description</div>
-  </div>
-
-  <!-- Example Modal for video -->
-  <div id="videoModal1" class="modal">
-    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
-    <video class="modal-content" controls>
-      <source src="path/to/your-art-clip.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="modal-caption">Art Clip - Some details about this video</div>
-  </div>
 </body>
 </html>
