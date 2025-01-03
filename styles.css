@@ -66,17 +66,16 @@ body {
 
 /* HERO SECTION */
 .hero {
-  /* Center the hero content horizontally and vertically */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;              /* Space between text and headshot */
-  flex-wrap: wrap;        /* Allows wrapping on smaller screens */
-  padding: 4rem 2rem;     /* Extra space for a nice, open look */
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
 }
 
 .hero-content {
-  text-align: center;     /* Center text under each other if you prefer */
+  text-align: center;
 }
 
 .hero-title {
@@ -90,7 +89,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* A more cohesive, "prettier" button with a gradient */
 .toggle-button {
   padding: 0.85rem 1.2rem;
   font-size: 1rem;
@@ -116,13 +114,12 @@ body {
 }
 
 .headshot {
-  width: 600px;      /* bigger headshot size */
-  max-width: 90%;    /* keep some responsiveness on smaller screens */
-  height: auto;      /* maintain aspect ratio */
+  width: 600px;
+  max-width: 90%;
+  height: auto;
   object-fit: cover;
 }
 
-/* "framed" class for decorative border and shadow */
 .framed {
   border: 10px double var(--primary-color);
   border-radius: 15px;
@@ -135,17 +132,103 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
   line-height: 1.6;
-  text-align: center;  /* Center subsection text */
+  text-align: center;
 }
 
 .page-section h2 {
   margin-top: 0;
 }
 
-/* FOOTER */
+/* CONTACT & FOOTER */
 .footer {
   background-color: var(--primary-color);
   color: #fff;
   text-align: center;
   padding: 1rem;
+}
+
+/* GALLERY SECTION */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay for hover effect */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(138, 154, 91, 0.8); /* semi-transparent with your primary color */
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+  transform: translateY(0);
+}
+
+/* MODAL STYLES */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (image/video) */
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 80%;
+  border: 5px double var(--primary-color);
+  border-radius: 10px;
+}
+
+/* Caption text */
+.modal-caption {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Close Button (X) */
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+.close:hover {
+  color: #ccc;
 }
