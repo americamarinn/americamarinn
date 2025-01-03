@@ -63,13 +63,13 @@
     <!-- Example Polaroid Frames in About section -->
     <div class="about-polaroids">
       <div class="polaroid-frame">
-        <img src="IMG_2959.HEIC" alt="Personal Photo 1" />
-        <div class="polaroid-caption">In my lovely home town!</div>
+        <img src="path/to/your-about-image1.jpg" alt="Personal Photo 1" />
+        <div class="polaroid-caption">A fun moment!</div>
       </div>
-      <!-- <div class="polaroid-frame">
+      <div class="polaroid-frame">
         <img src="path/to/your-about-image2.jpg" alt="Personal Photo 2" />
         <div class="polaroid-caption">Another memory!</div>
-      </div> -->
+      </div>
     </div>
   </section>
 
@@ -86,6 +86,7 @@
         View or Download My Résumé
       </a>
     </p>
+    <!-- You can also embed your résumé text or add direct copy here if you prefer -->
   </section>
 
   <!-- NEW: ART & DESIGN GALLERY SECTION -->
@@ -101,6 +102,7 @@
 
     <!-- Horizontal scroll container for polaroid frames or standard images -->
     <div class="horizontal-scroll">
+      <!-- Example Polaroid frames for artwork -->
       <div class="polaroid-frame">
         <img src="path/to/art-piece-1.jpg" alt="Art Piece 1" />
         <div class="polaroid-caption">Art Piece 1</div>
@@ -116,7 +118,7 @@
       <!-- Add more polaroid frames for more art; they will scroll horizontally -->
     </div>
 
-    <!-- Original gallery grid: optional for additional items -->
+    <!-- Original gallery grid if you prefer a grid layout for some items -->
     <div class="gallery-grid" style="margin-top: 2rem;">
       <!-- Example Image Item -->
       <div class="gallery-item" onclick="openModal('artModal1')">
@@ -141,6 +143,8 @@
           <p>Short Clip or Animation</p>
         </div>
       </div>
+
+      <!-- Add more images/videos as needed -->
     </div>
   </section>
 
@@ -171,46 +175,3 @@
   <footer class="footer">
     <p>&copy; 2024 América Marín Reyes. All rights reserved.</p>
   </footer>
-
-  <!-- Link your external JS file (if using a separate file) -->
-  <!-- <script src="script.js"></script> -->
-
-  <!-- MODAL SECTIONS (One modal per image/video) -->
-  <div id="artModal1" class="modal">
-    <span class="close" onclick="closeModal('artModal1')">&times;</span>
-    <img class="modal-content" src="path/to/your-art-1.jpg" alt="Art Piece 1" />
-    <div class="modal-caption">Art Piece 1 - Caption or description</div>
-  </div>
-
-  <div id="artModal2" class="modal">
-    <span class="close" onclick="closeModal('artModal2')">&times;</span>
-    <img class="modal-content" src="path/to/your-art-2.jpg" alt="Art Piece 2" />
-    <div class="modal-caption">Art Piece 2 - Caption or description</div>
-  </div>
-
-  <div id="videoModal1" class="modal">
-    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
-    <video class="modal-content" controls>
-      <source src="path/to/your-art-clip.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="modal-caption">Art Clip - Some details about this video</div>
-  </div>
-
-  <!-- Inline Script (remove if using separate script.js) -->
-  <script>
-    // Smoothly scroll to the "about" section when the button is clicked
-    document.getElementById('toggleAbout').addEventListener('click', function() {
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Simple modal/lightbox functionality
-    function openModal(modalId) {
-      document.getElementById(modalId).style.display = 'block';
-    }
-    function closeModal(modalId) {
-      document.getElementById(modalId).style.display = 'none';
-    }
-  </script>
-</body>
-</html>
