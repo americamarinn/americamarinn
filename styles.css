@@ -135,7 +135,7 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 2rem;
-  text-align: left; /* paragraphs left-aligned */
+  text-align: left;
 }
 .about-image {
   flex: 0 0 260px;
@@ -155,7 +155,9 @@ body {
   flex: 1;
 }
 
-/* SECTION DIVIDER: limit height to 45px */
+/* SECTION DIVIDER: half the original size
+   (use height: 50% to effectively reduce its
+   displayed height by half) */
 .section-divider {
   text-align: center;
   margin: 0 auto;
@@ -164,8 +166,7 @@ body {
 }
 .section-divider img {
   width: 100%;
-  height: 50%;
-    /* limit the divider's height */
+  height: 50%;  /* This ensures the vertical dimension is half of its container */
   object-fit: cover;
   display: block;
   margin: 0 auto;
