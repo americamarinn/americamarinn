@@ -263,46 +263,70 @@ body {
   transform: translateY(0);
 }
 
-/* Subheader styling */
+/* 
+  1) Center the "Experience & Projects" heading
+  2) Center the horizontal scroll area
+  3) Make project containers bigger & taller
+*/
+
+/* Center the subsection heading */
 .clip-header {
+  text-align: center; /* center "Experience & Projects" text */
   margin-top: 2rem;
-  text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.4rem;   /* a bit bigger if desired */
   font-weight: bold;
   color: var(--text-color);
 }
 
-/* PROJECT-ITEM SPECIFIC STYLES (optional) */
+/* Center the horizontal-scroll container itself if needed */
+.horizontal-scroll {
+  justify-content: center; /* ensures items are centered in the row */
+}
+
+/* Make the project-item bigger/taller rectangles */
 .project-item {
+  width: 300px;       /* wider */
+  height: 240px;      /* taller */
+  margin: 0 auto;     /* center each item in its space */
   padding: 1rem;
-  box-sizing: border-box;
-  /* optionally reduce or remove the 'cursor: pointer' if you don't want click modals for projects */
-  cursor: default; /* or keep pointer if you want to open a modal as well */
+  cursor: default;
+  display: flex;      /* ensures the children inside can be easily laid out */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between; 
 }
-.project-item h4 {
-  margin: 0.5rem 0;
-  color: var(--text-color);
-  text-align: center;
+
+/* Adjust the placeholder image to fill more space (optional) */
+.project-item img {
+  width: 100%;
+  height: auto;       /* keep aspect ratio if your placeholders are bigger */
+  max-height: 130px;  /* or something that fits your new container height */
+  object-fit: cover; 
+  border-radius: 8px;
 }
-.project-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
+
+/* 
+  2) Style the GitHub / Website buttons 
+     to match your "Learn More About Me" or translation button style 
+*/
 .project-button {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  font-weight: 700;       /* match "Learn More About Me" */
+  border: none;
+  border-radius: 10px;    /* same radius as your toggle-button */
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  text-decoration: none;  /* remove underline for anchor */
+  text-align: center;
 }
+
 .project-button:hover {
-  opacity: 0.9;
   transform: scale(1.05);
+  opacity: 0.9;
 }
+
 
 /* MODALS */
 .modal {
