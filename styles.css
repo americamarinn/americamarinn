@@ -265,61 +265,77 @@ body {
 
 /* 
   1) Center the "Experience & Projects" heading
-  2) Center the horizontal scroll area
-  3) Make project containers bigger & taller
+  2) Center the horizontal-scroll container
+  3) Stack project title, image, and buttons vertically
+  4) Make them tall vertical rectangles 
 */
 
 /* Center the subsection heading */
 .clip-header {
-  text-align: center; /* center "Experience & Projects" text */
-  margin-top: 2rem;
-  font-size: 1.4rem;   /* a bit bigger if desired */
+  text-align: center;   /* center the "Experience & Projects" text */
+  margin: 2rem 0;       /* add vertical spacing */
+  font-size: 1.4rem;    /* slightly bigger font */
   font-weight: bold;
   color: var(--text-color);
 }
 
-/* Center the horizontal-scroll container itself if needed */
+/* Ensure the horizontal scroll container is centered */
 .horizontal-scroll {
-  justify-content: center; /* ensures items are centered in the row */
+  justify-content: center; /* centers items in the horizontal row */
+  align-items: center;     /* vertically centers them if needed */
+  gap: 2rem;               /* add more space between items if you want */
 }
 
-/* Make the project-item bigger/taller rectangles */
+/* Make each project item a vertical rectangle */
 .project-item {
-  width: 300px;       /* wider */
-  height: 240px;      /* taller */
-  margin: 0 auto;     /* center each item in its space */
+  display: flex;
+  flex-direction: column;   /* stack title, image, and buttons vertically */
+  align-items: center;      /* center contents horizontally */
+  justify-content: space-between;
+  width: 260px;             /* adjust as desired for your layout */
+  height: 380px;            /* taller rectangle */
   padding: 1rem;
-  cursor: default;
-  display: flex;      /* ensures the children inside can be easily laid out */
-  flex-direction: column; 
-  align-items: center;
-  justify-content: space-between; 
+  margin: 0 auto;           /* center item in its container if any extra space */
+  box-sizing: border-box;
+  cursor: default;          /* no pointer if it doesn't open a modal */
 }
 
-/* Adjust the placeholder image to fill more space (optional) */
+/* Project Title at the top */
+.project-item h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Project Image in the middle (slightly smaller/bigger as needed) */
 .project-item img {
   width: 100%;
-  height: auto;       /* keep aspect ratio if your placeholders are bigger */
-  max-height: 130px;  /* or something that fits your new container height */
-  object-fit: cover; 
+  height: auto;     
+  max-height: 180px; /* ensure it fits in the container's height nicely */
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* 
-  2) Style the GitHub / Website buttons 
-     to match your "Learn More About Me" or translation button style 
-*/
+/* Buttons at the bottom */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;  /* space above buttons */
+}
+
+/* Matching style for Website/GitHub buttons (like "Learn More About Me") */
 .project-button {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #fff;
-  font-weight: 700;       /* match "Learn More About Me" */
+  font-weight: 700;
   border: none;
-  border-radius: 10px;    /* same radius as your toggle-button */
+  border-radius: 10px;    
   cursor: pointer;
   padding: 0.6rem 1rem;
-  transition: transform 0.2s ease, opacity 0.3s ease;
-  text-decoration: none;  /* remove underline for anchor */
+  text-decoration: none; 
   text-align: center;
+  transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 .project-button:hover {
