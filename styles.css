@@ -166,7 +166,7 @@ body {
 }
 .section-divider img {
   width: 100%;
-  height: 50%;  /* This ensures the vertical dimension is half of its container */
+  height: 25%;  /* This ensures the vertical dimension is half of its container */
   object-fit: cover;
   display: block;
   margin: 0 auto;
