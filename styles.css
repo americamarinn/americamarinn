@@ -166,7 +166,6 @@ body {
 }
 .section-divider img {
   width: 100%;
-  max-height: 60px;
   object-fit: cover;
   display: block;
   margin: 0 auto;
