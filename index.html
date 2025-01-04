@@ -42,33 +42,46 @@
     </div>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="page-section">
-    <h2>About Me</h2>
-    <p>
-      Hello and welcome! This is my personal website where I share a bit about
-      myself, my work, and my interests. My name is América Marín Reyes, and I
-      am currently a third-year student at Brown University studying Computer
-      Science and (Linguistic) Anthropology BA. I demonstrate a profound
-      interest in utilizing software and graphic design skills as catalysts
-      for societal transformation.
-    </p>
-    <p>
-      I also engage in rigorous research endeavors pertaining to Latine and
-      Indigenous identity, reflecting my dedication to scholarly exploration.
-      Furthermore, I display a passion for linguistic acquisition and its
-      pragmatic application within professional spheres.
-    </p>
+  <!-- SECTION DIVIDER (Between Hero and About) -->
+  <div class="section-divider">
+    <img src="path/to/your-faded-border.png" alt="Section Divider" />
+  </div>
 
-    <!-- Smaller oval image of yourself -->
-    <div class="oval-image-container">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="page-section about-container">
+    <!-- Oval image on left -->
+    <div class="about-image">
       <img 
         src="IMG_2959.HEIC" 
         alt="Another headshot in oval style" 
         class="oval-image" 
       />
     </div>
+
+    <!-- About text on the right -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hello and welcome! This is my personal website where I share a bit about
+        myself, my work, and my interests. My name is América Marín Reyes, and I
+        am currently a third-year student at Brown University studying Computer
+        Science and (Linguistic) Anthropology BA. I demonstrate a profound
+        interest in utilizing software and graphic design skills as catalysts
+        for societal transformation.
+      </p>
+      <p>
+        I also engage in rigorous research endeavors pertaining to Latine and
+        Indigenous identity, reflecting my dedication to scholarly exploration.
+        Furthermore, I display a passion for linguistic acquisition and its
+        pragmatic application within professional spheres.
+      </p>
+    </div>
   </section>
+
+  <!-- SECTION DIVIDER (Between About and Portfolio) -->
+  <div class="section-divider">
+    <img src="path/to/your-faded-border.png" alt="Section Divider" />
+  </div>
 
   <!-- PORTFOLIO SECTION -->
   <section id="portfolio" class="page-section">
@@ -85,6 +98,11 @@
     </p>
   </section>
 
+  <!-- SECTION DIVIDER (Between Portfolio and Art & Design) -->
+  <div class="section-divider">
+    <img src="path/to/your-faded-border.png" alt="Section Divider" />
+  </div>
+
   <!-- ART & DESIGN GALLERY SECTION -->
   <section id="art-design" class="page-section">
     <h2>Art &amp; Design</h2>
@@ -97,12 +115,12 @@
     </p>
     <p>
       Below is a collection of my favorite art pieces and graphic design work.
-      Hover over an image or video to enlarge it. Click to expand for a closer look!
+      Hover over an image to enlarge it, then click to view it bigger!
     </p>
 
-    <!-- Horizontal scroll container for images & video placeholders -->
+    <!-- Horizontal scroll container for art pieces -->
     <div class="horizontal-scroll">
-      <!-- Image 1 -->
+      <!-- Example: Art Piece 1 -->
       <div class="gallery-item" onclick="openModal('artModal1')">
         <img src="path/to/art-piece-1.jpg" alt="Art Piece 1" />
         <div class="overlay">
@@ -110,7 +128,7 @@
         </div>
       </div>
 
-      <!-- Image 2 -->
+      <!-- Art Piece 2 -->
       <div class="gallery-item" onclick="openModal('artModal2')">
         <img src="path/to/art-piece-2.jpg" alt="Art Piece 2" />
         <div class="overlay">
@@ -118,25 +136,34 @@
         </div>
       </div>
 
-      <!-- Video / Animation Clip -->
-      <div class="gallery-item" onclick="openModal('videoModal')">
-        <video src="path/to/art-clip.mp4" muted style="width: 100%;"></video>
-        <div class="overlay">
-          <p>Short Animation</p>
-        </div>
-      </div>
-
-      <!-- Image 3 -->
+      <!-- Art Piece 3 -->
       <div class="gallery-item" onclick="openModal('artModal3')">
         <img src="path/to/art-piece-3.jpg" alt="Art Piece 3" />
         <div class="overlay">
           <p>Art Piece 3</p>
         </div>
       </div>
+      <!-- Add more images as you like -->
+    </div>
 
-      <!-- Add more as needed -->
+    <!-- A second horizontal scroll container for the animation clip(s) below the images -->
+    <h3 class="clip-header">Animation / Video Clip</h3>
+    <div class="horizontal-scroll">
+      <!-- Example: Animation Clip -->
+      <div class="gallery-item" onclick="openModal('videoModal')">
+        <video src="path/to/your-art-clip.mp4" muted></video>
+        <div class="overlay">
+          <p>My Animation Clip</p>
+        </div>
+      </div>
+      <!-- Add more video clips if needed -->
     </div>
   </section>
+
+  <!-- SECTION DIVIDER (Between Art & Design and Contact) -->
+  <div class="section-divider">
+    <img src="path/to/your-faded-border.png" alt="Section Divider" />
+  </div>
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="page-section">
@@ -187,32 +214,31 @@
   <div id="artModal1" class="modal">
     <span class="close" onclick="closeModal('artModal1')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-1.jpg" alt="Art Piece 1" />
-    <div class="modal-caption">Art Piece 1 - Additional details here</div>
+    <div class="modal-caption">Art Piece 1 - Additional details</div>
   </div>
 
   <!-- Art Piece 2 -->
   <div id="artModal2" class="modal">
     <span class="close" onclick="closeModal('artModal2')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-2.jpg" alt="Art Piece 2" />
-    <div class="modal-caption">Art Piece 2 - Additional details here</div>
-  </div>
-
-  <!-- Video Modal -->
-  <div id="videoModal" class="modal">
-    <span class="close" onclick="closeModal('videoModal')">&times;</span>
-    <video class="modal-content" controls>
-      <source src="path/to/art-clip.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="modal-caption">Short Animation - Additional details here</div>
+    <div class="modal-caption">Art Piece 2 - Additional details</div>
   </div>
 
   <!-- Art Piece 3 -->
   <div id="artModal3" class="modal">
     <span class="close" onclick="closeModal('artModal3')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-3.jpg" alt="Art Piece 3" />
-    <div class="modal-caption">Art Piece 3 - Additional details here</div>
+    <div class="modal-caption">Art Piece 3 - Additional details</div>
   </div>
 
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal">
+    <span class="close" onclick="closeModal('videoModal')">&times;</span>
+    <video class="modal-content" controls>
+      <source src="path/to/your-art-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="modal-caption">Animation Clip - Some details</div>
+  </div>
 </body>
 </html>
