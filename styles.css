@@ -3,7 +3,7 @@
   This set aims for a light brown/cream page background.
 */
 :root {
-  /* Earthy green accent or your choice */
+  /* Earthy green accent */
   --primary-color: #8a9a5b;
   /* Lighter brown/cream for gradient, etc. */
   --secondary-color: #e8dace;
@@ -23,8 +23,8 @@ body {
   font-family: Monaco, monospace; /* Use Monaco font */
   background-color: var(--background-color);
   color: var(--text-color);
-  scroll-behavior: smooth; /* Smooth scrolling for in-page links */
-  min-height: 100vh;       /* Ensure background covers full screen height */
+  scroll-behavior: smooth; /* Smooth in-page scrolling */
+  min-height: 100vh;
 }
 
 /* NAVIGATION BAR */
@@ -36,7 +36,7 @@ body {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 1000; /* keeps nav on top if you scroll */
+  z-index: 1000; /* keep nav on top */
 }
 
 .brand-title {
@@ -74,8 +74,10 @@ body {
   padding: 4rem 2rem;
 }
 
+/* Make the text align left so it's clearly on the left side */
 .hero-content {
-  text-align: center;
+  text-align: left;
+  flex: 1 1 300px;
 }
 
 .hero-title {
@@ -95,21 +97,22 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s ease;
 }
+
 .toggle-button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* Hero image (headshot) */
 .hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 1 300px;
 }
 
 .headshot {
-  width: 600px;
-  max-width: 90%;
+  width: 450px;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -117,10 +120,10 @@ body {
 .framed {
   border: 10px double var(--primary-color);
   border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* SECTIONS */
+/* PAGE SECTIONS */
 .page-section {
   max-width: 800px;
   margin: 2rem auto;
@@ -133,18 +136,19 @@ body {
   margin-top: 0;
 }
 
-/* ABOUT SECTION: Oval image */
+/* ABOUT SECTION: oval image */
 .oval-image-container {
   margin-top: 2rem;
 }
 .oval-image {
-  width: 250px;
-  height: auto;
   display: block;
-  margin: 0 auto;
-  border-radius: 50%; /* creates an oval or circle shape */
-  border: 8px double var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 1rem auto 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* perfect circle if width & height are the same */
+  border: 6px double var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -155,49 +159,59 @@ body {
   padding: 1rem;
 }
 
-/* HORIZONTAL SCROLL GALLERY (ART & DESIGN) */
+/* HORIZONTAL SCROLL (Art & Design) */
 .horizontal-scroll {
-  white-space: nowrap; /* keeps items in a horizontal line */
-  overflow-x: auto;    /* horizontal scroll if items overflow */
-  padding: 1rem 0;
+  display: flex;       /* line them up horizontally */
+  flex-wrap: nowrap;   /* no wrapping; force horizontal scroll */
+  gap: 1rem;
+  overflow-x: auto;    /* horizontal scroll if more items */
+  margin-top: 2rem;
+  padding: 0.5rem 0;
 }
+
+/* Hide default scroll bar styling if desired */
 .horizontal-scroll::-webkit-scrollbar {
-  height: 8px; /* a bit larger so user can see it */
+  height: 8px; 
 }
 .horizontal-scroll::-webkit-scrollbar-track {
-  background: #ddd; /* track color */
+  background: #ddd;
 }
 .horizontal-scroll::-webkit-scrollbar-thumb {
-  background: var(--primary-color); /* slider thumb color */
+  background: var(--primary-color);
   border-radius: 4px;
 }
 
-/* GALLERY ITEMS (works for both grid & horizontal) */
+/* GALLERY ITEMS for horizontal scroll */
 .gallery-item {
   position: relative;
   cursor: pointer;
   overflow: hidden;
   border: 2px solid var(--primary-color);
   border-radius: 10px;
-  width: 250px; /* fixed width so items line up horizontally */
-  display: inline-block; /* so they align horizontally in .horizontal-scroll */
-  margin-right: 1rem;    /* spacing between items */
-  vertical-align: top;
+  flex: 0 0 auto;           /* So each item keeps its width; no shrinking */
+  width: 250px;             /* fix the item width to line up horizontally */
+  height: 200px;            /* optional if you want a consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;   /* a background if images are smaller than container */
 }
 
+/* Full width for images & videos inside the item */
 .gallery-item img,
 .gallery-item video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-/* Overlays */
+/* Overlay for hover effect */
 .overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(138, 154, 91, 0.8); /* semi-transparent with your primary color */
+  background: rgba(138, 154, 91, 0.8);
   color: #fff;
   text-align: center;
   padding: 0.5rem;
@@ -208,25 +222,17 @@ body {
   transform: translateY(0);
 }
 
-/* Grid layout for leftover or optional items */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
 /* MODAL STYLES */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;  /* hidden by default */
   position: fixed;
-  z-index: 2000; /* Sit on top */
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
 }
 
 .modal-content {
@@ -244,7 +250,7 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Close Button (X) */
+/* Close Button */
 .close {
   position: absolute;
   top: 2rem;
