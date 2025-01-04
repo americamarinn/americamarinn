@@ -146,13 +146,6 @@ body {
   flex: 1;
 }
 
-/* SECTION DIVIDER: thinner, no giant vertical stretch */
-.section-divider {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 100%;
-  overflow: hidden; /* ensures we don't overflow beyond container */
-}
 
 
 /* FOOTER */
