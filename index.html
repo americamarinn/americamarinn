@@ -16,19 +16,45 @@
       <li><a href="#art-design">Art &amp; Design</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <!-- New translation dropdown container -->
+    <div class="translate-container">
+      <label for="languageSelect" class="visually-hidden">Select Language</label>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
   </nav>
 
   <!-- Hero / Header Section -->
   <header class="hero">
     <!-- Left side: Name & Welcome -->
     <div class="hero-content">
-      <h1 class="hero-title">América Marín Reyes</h1>
-      <p class="hero-subtitle">
+      <h1 class="hero-title" data-en="América Marín Reyes"
+                           data-es="América Marín Reyes"
+                           data-fr="América Marín Reyes"
+                           data-pt="América Marín Reyes">
+        América Marín Reyes
+      </h1>
+      <p class="hero-subtitle"
+         data-en="Bridging the worlds of technology and creativity, I explore the intersection of design, software, and identity."
+         data-es="Uniendo los mundos de la tecnología y la creatividad, exploro la intersección del diseño, el software y la identidad."
+         data-fr="En reliant les mondes de la technologie et de la créativité, j'explore l'intersection du design, du logiciel et de l'identité."
+         data-pt="Conectando os mundos da tecnologia e da criatividade, exploro a interseção de design, software e identidade.">
         Bridging the worlds of technology and creativity, 
         I explore the intersection of design, software, and identity.
       </p>
       <!-- Button that scrolls to the About section -->
-      <button id="toggleAbout" class="toggle-button">Learn More About Me</button>
+      <button id="toggleAbout" class="toggle-button"
+        data-en="Learn More About Me"
+        data-es="Conoce Más Sobre Mí"
+        data-fr="En Savoir Plus Sur Moi"
+        data-pt="Saiba Mais Sobre Mim"
+      >
+        Learn More About Me
+      </button>
     </div>
 
     <!-- Right side: Headshot -->
@@ -59,20 +85,31 @@
 
     <!-- About text on the right -->
     <div class="about-text">
-      <h2>About Me</h2>
-      <p>
+      <h2 
+        data-en="About Me" 
+        data-es="Sobre Mí" 
+        data-fr="À Propos" 
+        data-pt="Sobre Mim"
+      >
+        About Me
+      </h2>
+      <p
+        data-en="Hello and welcome! This is my personal website where I share a bit about myself, my work, and my interests..."
+        data-es="¡Hola y bienvenidos! Este es mi sitio web personal donde comparto un poco sobre mí, mi trabajo y mis intereses..."
+        data-fr="Bonjour et bienvenue! Voici mon site personnel où je partage un peu de moi, de mon travail et de mes centres d'intérêt..."
+        data-pt="Olá e bem-vindo! Este é meu site pessoal onde compartilho um pouco sobre mim, meu trabalho e meus interesses..."
+      >
         Hello and welcome! This is my personal website where I share a bit about
-        myself, my work, and my interests. My name is América Marín Reyes, and I
-        am currently a third-year student at Brown University studying Computer
-        Science and (Linguistic) Anthropology BA. I demonstrate a profound
-        interest in utilizing software and graphic design skills as catalysts
-        for societal transformation.
+        myself, my work, and my interests...
       </p>
-      <p>
+      <p
+        data-en="I also engage in rigorous research endeavors pertaining to Latine and Indigenous identity..."
+        data-es="También participo en rigurosas investigaciones relacionadas con la identidad latina e indígena..."
+        data-fr="Je m'engage également dans des recherches rigoureuses portant sur l'identité latine et indigène..."
+        data-pt="Também me envolvo em pesquisas rigorosas relacionadas à identidade latina e indígena..."
+      >
         I also engage in rigorous research endeavors pertaining to Latine and
-        Indigenous identity, reflecting my dedication to scholarly exploration.
-        Furthermore, I display a passion for linguistic acquisition and its
-        pragmatic application within professional spheres.
+        Indigenous identity...
       </p>
     </div>
   </section>
@@ -84,13 +121,37 @@
 
   <!-- PORTFOLIO SECTION -->
   <section id="portfolio" class="page-section">
-    <h2>Portfolio</h2>
-    <p>
+    <h2 
+      data-en="Portfolio"
+      data-es="Portafolio"
+      data-fr="Portefeuille"
+      data-pt="Portfólio"
+    >
+      Portfolio
+    </h2>
+    <p
+      data-en="Here is where I’ll showcase my projects and accomplishments."
+      data-es="Aquí es donde mostraré mis proyectos y logros."
+      data-fr="C'est ici que je présenterai mes projets et mes réalisations."
+      data-pt="É aqui que vou mostrar meus projetos e conquistas."
+    >
       Here is where I’ll showcase my projects and accomplishments.
     </p>
     <p>
-      <strong>Résumé:</strong>
-      <a href="cs- America Résumé 24.pdf" target="_blank" rel="noopener noreferrer">
+      <strong
+        data-en="Résumé:"
+        data-es="Currículum:"
+        data-fr="CV :"
+        data-pt="Currículo:"
+      >
+        Résumé:
+      </strong>
+      <a href="cs- America Résumé 24.pdf" target="_blank" rel="noopener noreferrer"
+         data-en="View or Download My Résumé"
+         data-es="Ver o Descargar Mi Currículum"
+         data-fr="Voir ou Télécharger Mon CV"
+         data-pt="Ver ou Baixar Meu Currículo"
+      >
         View or Download My Résumé
       </a>
     </p>
@@ -103,17 +164,30 @@
 
   <!-- ART & DESIGN GALLERY SECTION -->
   <section id="art-design" class="page-section">
-    <h2>Art &amp; Design</h2>
-    <p>
-      América is a Fronteriza from San Diego, California, and the daughter of 
-      Mexican immigrants from Veracruz and Tamaulipas, Mexico. Her art delves into 
-      themes of gender fluidity and embodiment, reflecting unique non-binary 
-      humanoids in layered watercolor and gouache. Through her work, América 
-      demonstrates the beauty of fluidity and identity.
+    <h2
+      data-en="Art & Design"
+      data-es="Arte y Diseño"
+      data-fr="Art & Design"
+      data-pt="Arte & Design"
+    >
+      Art &amp; Design
+    </h2>
+    <p
+      data-en="América is a Fronteriza from San Diego, California..."
+      data-es="América es Fronteriza de San Diego, California..."
+      data-fr="América est une Fronteriza de San Diego, Californie..."
+      data-pt="América é uma Fronteriza de San Diego, Califórnia..."
+    >
+      América is a Fronteriza from San Diego, California...
     </p>
-    <p>
+    <p
+      data-en="Below is a collection of my favorite art pieces and graphic design work. Hover over an image to enlarge it..."
+      data-es="A continuación se muestra una colección de mis piezas de arte favoritas y trabajos de diseño gráfico. Pasa el cursor sobre una imagen..."
+      data-fr="Voici une collection de mes pièces d'art préférées et de mes travaux de design graphique. Survolez une image..."
+      data-pt="Abaixo está uma coleção das minhas peças de arte favoritas e trabalhos de design gráfico. Passe o cursor sobre uma imagem..."
+    >
       Below is a collection of my favorite art pieces and graphic design work.
-      Hover over an image to enlarge it, then click to view it bigger!
+      Hover over an image to enlarge it...
     </p>
 
     <!-- Horizontal scroll container for art pieces -->
@@ -121,7 +195,7 @@
       <!-- Art Piece 1 -->
       <div class="gallery-item" onclick="openModal('artModal1')">
         <img src="selfportraitpic.pdf" alt="Art Piece 1" />
-        <div class="overlay">
+        <div class="overlay" data-en="Self Portrait" data-es="Autorretrato" data-fr="Autoportrait" data-pt="Auto-Retrato">
           <p>Self Portrait</p>
         </div>
       </div>
@@ -129,7 +203,7 @@
       <!-- Art Piece 2 -->
       <div class="gallery-item" onclick="openModal('artModal2')">
         <img src="slothpic.pdf" alt="Art Piece 2" />
-        <div class="overlay">
+        <div class="overlay" data-en="Sloth" data-es="Pereza" data-fr="Paresse" data-pt="Preguiça">
           <p>Sloth</p>
         </div>
       </div>
@@ -137,7 +211,7 @@
       <!-- Art Piece 3 -->
       <div class="gallery-item" onclick="openModal('artModal3')">
         <img src="path/to/art-piece-3.jpg" alt="Art Piece 3" />
-        <div class="overlay">
+        <div class="overlay" data-en="Art Piece 3" data-es="Pieza de Arte 3" data-fr="Pièce d'Art 3" data-pt="Peça de Arte 3">
           <p>Art Piece 3</p>
         </div>
       </div>
@@ -145,11 +219,18 @@
     </div>
 
     <!-- A second horizontal scroll container for the animation clip(s) below the images -->
-    <h3 class="clip-header">Animation / Video Clip</h3>
+    <h3 class="clip-header"
+      data-en="Animation / Video Clip"
+      data-es="Animación / Clip de Video"
+      data-fr="Animation / Clip Vidéo"
+      data-pt="Animação / Vídeo Clipe"
+    >
+      Animation / Video Clip
+    </h3>
     <div class="horizontal-scroll">
       <div class="gallery-item" onclick="openModal('videoModal')">
         <video src="path/to/your-art-clip.mp4" muted></video>
-        <div class="overlay">
+        <div class="overlay" data-en="My Animation Clip" data-es="Mi Clip de Animación" data-fr="Mon Clip d'Animation" data-pt="Meu Clipe de Animação">
           <p>My Animation Clip</p>
         </div>
       </div>
@@ -163,30 +244,54 @@
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="page-section">
-    <h2>Contact</h2>
+    <h2
+      data-en="Contact"
+      data-es="Contacto"
+      data-fr="Contact"
+      data-pt="Contato"
+    >
+      Contact
+    </h2>
     <p>
-      <strong>América Marín</strong><br />
-      Phone: (619) 855-4707<br />
-      E-mail:
-      <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br />
-      LinkedIn:
-      <a
-        href="https://www.linkedin.com/in/america-marin-65b5b5297"
-        target="_blank"
-        >america-marin-65b5b5297</a
-      ><br />
-      Website:
-      <a
-        href="https://americamarinn.github.io/americamarinn/"
-        target="_blank"
-        >americamarinn.github.io</a
+      <strong
+        data-en="América Marín"
+        data-es="América Marín"
+        data-fr="América Marín"
+        data-pt="América Marín"
       >
+        América Marín
+      </strong><br />
+      <span data-en="Phone" data-es="Teléfono" data-fr="Téléphone" data-pt="Telefone">
+        Phone
+      </span>: (619) 855-4707<br />
+      <span data-en="E-mail" data-es="Correo" data-fr="E-mail" data-pt="E-mail">
+        E-mail
+      </span>:
+      <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br />
+      <span data-en="LinkedIn" data-es="LinkedIn" data-fr="LinkedIn" data-pt="LinkedIn">
+        LinkedIn
+      </span>:
+      <a href="https://www.linkedin.com/in/america-marin-65b5b5297" target="_blank">
+        america-marin-65b5b5297
+      </a><br />
+      <span data-en="Website" data-es="Sitio Web" data-fr="Site Web" data-pt="Site">
+        Website
+      </span>:
+      <a href="https://americamarinn.github.io/americamarinn/" target="_blank">
+        americamarinn.github.io
+      </a>
     </p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2024 América Marín Reyes. All rights reserved.</p>
+    <p data-en="© 2024 América Marín Reyes. All rights reserved."
+       data-es="© 2024 América Marín Reyes. Todos los derechos reservados."
+       data-fr="© 2024 América Marín Reyes. Tous droits réservés."
+       data-pt="© 2024 América Marín Reyes. Todos os direitos reservados."
+    >
+      &copy; 2024 América Marín Reyes. All rights reserved.
+    </p>
   </footer>
 
   <!-- JavaScript for scrolling & modals -->
@@ -203,25 +308,72 @@
     function closeModal(modalId) {
       document.getElementById(modalId).style.display = 'none';
     }
+
+    // Basic translation logic
+    const languageSelect = document.getElementById('languageSelect');
+    languageSelect.addEventListener('change', function() {
+      const selectedLang = languageSelect.value; // en, es, fr, pt
+
+      // For each element that has a data-* attribute,
+      // we update its text content with the appropriate language.
+      document.querySelectorAll('[data-en]').forEach(elem => {
+        const newText = elem.getAttribute(`data-${selectedLang}`);
+        if (newText) {
+          // If it's a button or other text container, update textContent
+          if (elem.tagName.toLowerCase() === 'input'
+              || elem.tagName.toLowerCase() === 'button'
+              || elem.tagName.toLowerCase() === 'select'
+              || elem.tagName.toLowerCase() === 'textarea'
+             ) {
+            elem.value = newText;
+          } else {
+            // If it has a child <p> in overlay, we might handle differently
+            // But for simplicity, we assume direct text
+            elem.textContent = newText;
+          }
+        }
+      });
+    });
   </script>
 
   <!-- MODALS -->
   <div id="artModal1" class="modal">
     <span class="close" onclick="closeModal('artModal1')">&times;</span>
     <img class="modal-content" src="selfportraitpic.pdf" alt="Art Piece 1" />
-    <div class="modal-caption">Art Piece 1 - Additional details</div>
+    <div class="modal-caption"
+         data-en="Art Piece 1 - Additional details"
+         data-es="Pieza de Arte 1 - Detalles adicionales"
+         data-fr="Pièce d'Art 1 - Détails supplémentaires"
+         data-pt="Peça de Arte 1 - Detalhes adicionais"
+    >
+      Art Piece 1 - Additional details
+    </div>
   </div>
 
   <div id="artModal2" class="modal">
     <span class="close" onclick="closeModal('artModal2')">&times;</span>
     <img class="modal-content" src="slothpic.pdf" alt="Art Piece 2" />
-    <div class="modal-caption">Art Piece 2 - Additional details</div>
+    <div class="modal-caption"
+         data-en="Art Piece 2 - Additional details"
+         data-es="Pieza de Arte 2 - Detalles adicionales"
+         data-fr="Pièce d'Art 2 - Détails supplémentaires"
+         data-pt="Peça de Arte 2 - Detalhes adicionais"
+    >
+      Art Piece 2 - Additional details
+    </div>
   </div>
 
   <div id="artModal3" class="modal">
     <span class="close" onclick="closeModal('artModal3')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-3.jpg" alt="Art Piece 3" />
-    <div class="modal-caption">Art Piece 3 - Additional details</div>
+    <div class="modal-caption"
+         data-en="Art Piece 3 - Additional details"
+         data-es="Pieza de Arte 3 - Detalles adicionales"
+         data-fr="Pièce d'Art 3 - Détails supplémentaires"
+         data-pt="Peça de Arte 3 - Detalhes adicionais"
+    >
+      Art Piece 3 - Additional details
+    </div>
   </div>
 
   <!-- Video Modal -->
@@ -231,7 +383,14 @@
       <source src="path/to/your-art-clip.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="modal-caption">Animation Clip - Some details</div>
+    <div class="modal-caption"
+         data-en="Animation Clip - Some details"
+         data-es="Clip de Animación - Algunos detalles"
+         data-fr="Clip d'Animation - Quelques détails"
+         data-pt="Clipe de Animação - Alguns detalhes"
+    >
+      Animation Clip - Some details
+    </div>
   </div>
 </body>
 </html>

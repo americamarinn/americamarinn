@@ -1,6 +1,7 @@
 /*
-  Colors (customize as desired!)
-  This set aims for a light brown/cream page background.
+  1) We add a fluid, color-changing gradient background to the body
+  using an @keyframes animation.
+  2) We keep your existing earthy pastel theme for accent colors.
 */
 :root {
   --primary-color: #8a9a5b;     /* Earthy green accent */
@@ -17,19 +18,37 @@
 body {
   margin: 0;
   font-family: Monaco, monospace;
-  background-color: var(--background-color);
   color: var(--text-color);
   scroll-behavior: smooth;
   min-height: 100vh;
+
+  /* 
+    1) Use a multi-stop gradient
+    2) Animate it with keyframes
+  */
+  background: linear-gradient(120deg, #e5d8c7, #f0e6da, #e8dace, #f4eade);
+  background-size: 400% 400%;
+  animation: pastelGradient 20s ease infinite; /* 20s cycle, repeating */
+}
+
+/* Animation Keyframes for the gradient */
+@keyframes pastelGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*
   SCROLL MARGIN
-  This ensures sections show up "front and center" 
-  even with a sticky nav & dividers.
 */
 #about, #portfolio, #art-design, #contact {
-  scroll-margin-top: 100px; /* Adjust as needed */
+  scroll-margin-top: 100px;
 }
 
 /* NAVIGATION BAR */
@@ -42,6 +61,23 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* The translate dropdown container */
+.translate-container {
+  margin-left: 2rem; /* or adjust spacing as needed */
+}
+.translate-container select {
+  padding: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
 }
 
 .brand-title {
@@ -84,7 +120,6 @@ body {
 .hero-title {
   font-size: 2.8rem;
   margin: 0 0 1rem;
-  color: var(--text-color);
 }
 .toggle-button {
   padding: 0.85rem 1.2rem;
@@ -129,7 +164,7 @@ body {
   text-align: center;
 }
 
-/* ABOUT SECTION: image left, text right */
+/* ABOUT SECTION */
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -155,9 +190,7 @@ body {
   flex: 1;
 }
 
-/* SECTION DIVIDER: half the original size
-   (use height: 50% to effectively reduce its
-   displayed height by half) */
+/* SECTION DIVIDER */
 .section-divider {
   text-align: center;
   margin: 0 auto;
@@ -180,7 +213,7 @@ body {
   padding: 1rem;
 }
 
-/* HORIZONTAL SCROLL GALLERIES */
+/* HORIZONTAL SCROLL */
 .horizontal-scroll {
   display: flex;
   flex-wrap: nowrap;
@@ -223,7 +256,7 @@ body {
   display: block;
 }
 
-/* Overlays on hover */
+/* Overlays */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -244,7 +277,6 @@ body {
   text-align: left;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--text-color);
 }
 
 /* MODALS */
