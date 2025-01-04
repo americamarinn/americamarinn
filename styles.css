@@ -25,11 +25,11 @@ body {
 
 /*
   SCROLL MARGIN
-  This ensures sections show up "front and center" 
-  even with a sticky nav & dividers.
+  Ensures sections appear "front and center"
+  even with sticky nav & dividers.
 */
 #about, #portfolio, #art-design, #contact {
-  scroll-margin-top: 100px; /* Adjust as needed for sticky nav offset */
+  scroll-margin-top: 100px; /* offset for sticky nav */
 }
 
 /* NAVIGATION BAR */
@@ -58,6 +58,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .navbar-links li a {
   text-decoration: none;
   color: #fff;
@@ -69,7 +70,7 @@ body {
 
 /* Translation Dropdown */
 .translate-container {
-  margin-left: 2rem; /* space from the nav links */
+  margin-left: 2rem; /* spacing from nav links */
 }
 .translate-container select {
   font-size: 0.9rem;
@@ -80,7 +81,7 @@ body {
   color: #fff;
   cursor: pointer;
   outline: none;
-  appearance: none; /* remove default arrow in some browsers */
+  appearance: none;
   font-weight: 600;
   transition: opacity 0.3s ease;
 }
@@ -102,7 +103,6 @@ body {
   flex-wrap: wrap;
   padding: 4rem 2rem;
 }
-
 .hero-content {
   text-align: left;
   flex: 1 1 300px;
@@ -143,7 +143,7 @@ body {
 .framed {
   border: 10px double var(--primary-color);
   border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* PAGE SECTIONS */
@@ -224,7 +224,7 @@ body {
   border-radius: 4px;
 }
 
-/* GALLERY ITEMS */
+/* GALLERY ITEMS (Art or Projects) */
 .gallery-item {
   position: relative;
   cursor: pointer;
@@ -247,7 +247,7 @@ body {
   display: block;
 }
 
-/* Overlay on hover */
+/* Overlays on hover (Art pieces) */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -263,12 +263,45 @@ body {
   transform: translateY(0);
 }
 
+/* Subheader styling */
 .clip-header {
   margin-top: 2rem;
   text-align: left;
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--text-color);
+}
+
+/* PROJECT-ITEM SPECIFIC STYLES (optional) */
+.project-item {
+  padding: 1rem;
+  box-sizing: border-box;
+  /* optionally reduce or remove the 'cursor: pointer' if you don't want click modals for projects */
+  cursor: default; /* or keep pointer if you want to open a modal as well */
+}
+.project-item h4 {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+  text-align: center;
+}
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.project-button {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+.project-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 /* MODALS */

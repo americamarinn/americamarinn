@@ -11,7 +11,7 @@
   <nav class="navbar">
     <div class="brand-title">América Marín Reyes</div>
     <ul class="navbar-links">
-      <!-- Each link has data- attributes for each language -->
+      <!-- Each link has data attributes for translations -->
       <li>
         <a
           href="#about"
@@ -61,6 +61,7 @@
     <!-- Translation Dropdown -->
     <div class="translate-container">
       <label for="languageSelect" class="visually-hidden">Select Language</label>
+      <!-- English is default (selected) -->
       <select id="languageSelect">
         <option value="en" selected>English</option>
         <option value="es">Español</option>
@@ -74,7 +75,6 @@
   <header class="hero">
     <!-- Left side: Name & Welcome -->
     <div class="hero-content">
-      <!-- Title with translations -->
       <h1
         class="hero-title"
         data-en="América Marín Reyes"
@@ -84,7 +84,6 @@
       >
         América Marín Reyes
       </h1>
-      <!-- Subtitle with translations -->
       <p
         class="hero-subtitle"
         data-en="Bridging the worlds of technology and creativity, I explore the intersection of design, software, and identity."
@@ -95,7 +94,7 @@
         Bridging the worlds of technology and creativity, 
         I explore the intersection of design, software, and identity.
       </p>
-      <!-- Button that scrolls to the About section, with translations -->
+      <!-- Button that scrolls to the About section -->
       <button
         id="toggleAbout"
         class="toggle-button"
@@ -144,23 +143,27 @@
       >
         About Me
       </h2>
-      <!-- First paragraph with translations -->
       <p
         data-en="Hello and welcome! This is my personal website where I share a bit about myself, my work, and my interests. My name is América Marín Reyes, and I am currently a third-year student at Brown University studying Computer Science and (Linguistic) Anthropology BA. I demonstrate a profound interest in utilizing software and graphic design skills as catalysts for societal transformation."
         data-es="¡Hola y bienvenidos! Este es mi sitio web personal donde comparto un poco sobre mí, mi trabajo y mis intereses. Mi nombre es América Marín Reyes y actualmente soy estudiante de tercer año en la Universidad Brown, estudiando Ciencias de la Computación y (Antropología Lingüística). Demuestro un gran interés en utilizar habilidades de software y diseño gráfico como catalizadores de la transformación social."
-        data-fr="Bonjour et bienvenue! Ceci est mon site personnel où je partage un peu sur moi, mon travail et mes intérêts. Je m'appelle América Marín Reyes et je suis actuellement en troisième année à l'Université Brown, étudiant l'informatique et l'anthropologie (linguistique). Je montre un vif intérêt pour l'utilisation de compétences en logiciels et en design graphique comme catalyseurs de la transformation sociale."
+        data-fr="Bonjour et bienvenue! Ceci est mon site personnel où je partage un peu de moi, de mon travail et de mes intérêts. Je m'appelle América Marín Reyes et je suis actuellement en troisième année à l'Université Brown, étudiant l'informatique et l'anthropologie (linguistique). Je montre un vif intérêt pour l'utilisation de compétences en logiciels et en design graphique comme catalyseurs de la transformation sociale."
         data-pt="Olá e bem-vindo! Este é o meu site pessoal onde compartilho um pouco sobre mim, meu trabalho e meus interesses. Meu nome é América Marín Reyes e estou atualmente no terceiro ano na Universidade Brown, estudando Ciência da Computação e Antropologia (Linguística). Demonstro um grande interesse em utilizar habilidades de software e design gráfico como catalisadores de transformação social."
       >
-        Hello and welcome! This is my personal website...
+      Hello and welcome! This is my personal website where I share a bit about myself, my work, 
+      and my interests. My name is América Marín Reyes, and I am currently a third-year student 
+      at Brown University studying Computer Science and (Linguistic) Anthropology BA. I demonstrate
+      a profound interest in utilizing software and graphic design skills as catalysts for societal
+      transformation.
       </p>
-      <!-- Second paragraph with translations -->
       <p
         data-en="I also engage in rigorous research endeavors pertaining to Latine and Indigenous identity, reflecting my dedication to scholarly exploration. Furthermore, I display a passion for linguistic acquisition and its pragmatic application within professional spheres."
-        data-es="También participo en esfuerzos de investigación rigurosos relacionados con la identidad latina e indígena, reflejando mi dedicación a la exploración académica. Además, muestro pasión por la adquisición lingüística y su aplicación pragmática en contextos profesionales."
-        data-fr="Je m'engage également dans des recherches rigoureuses sur l'identité latine et autochtone, reflétant mon dévouement à l'exploration universitaire. En outre, je fais preuve d'une passion pour l'acquisition linguistique et son application pragmatique dans les milieux professionnels."
-        data-pt="Também me envolvo em esforços de pesquisa rigorosos relacionados à identidade latina e indígena, refletindo minha dedicação à exploração acadêmica. Além disso, demonstro paixão pela aquisição linguística e sua aplicação pragmática em ambientes profissionais."
+        data-es="También participo en esfuerzos de investigación rigurosos relacionados con la identidad latina e indígena, lo que refleja mi dedicación a la exploración académica. Además, muestro pasión por la adquisición lingüística y su aplicación pragmática en contextos profesionales."
+        data-fr="Je m'engage également dans des recherches rigoureuses portant sur l'identité latine et autochtone, reflétant mon dévouement à l'exploration universitaire. De plus, je fais preuve d'une passion pour l'acquisition linguistique et son application pragmatique dans le domaine professionnel."
+        data-pt="Também me envolvo em pesquisas rigorosas relacionadas à identidade latina e indígena, refletindo minha dedicação à exploração acadêmica. Além disso, demonstro paixão pela aquisição linguística e sua aplicação pragmática em contextos profissionais."
       >
-        I also engage in rigorous research endeavors...
+      I also engage in rigorous research endeavors pertaining to Latine and Indigenous identity, 
+      reflecting my dedication to scholarly exploration. Furthermore, I display a passion for 
+      linguistic acquisition and its pragmatic application within professional spheres.
       </p>
     </div>
   </section>
@@ -188,7 +191,6 @@
     >
       Here is where I’ll showcase my projects and accomplishments.
     </p>
-    <!-- Résumé link with translations -->
     <p>
       <strong
         data-en="Résumé:"
@@ -210,6 +212,96 @@
         View or Download My Résumé
       </a>
     </p>
+
+    <!-- NEW SUBSECTION: EXPERIENCE & PROJECTS -->
+    <h3
+      class="clip-header"
+      data-en="Experience & Projects"
+      data-es="Experiencia & Proyectos"
+      data-fr="Expérience & Projets"
+      data-pt="Experiência & Projetos"
+    >
+      Experience &amp; Projects
+    </h3>
+
+    <!-- Horizontal scroll container for projects -->
+    <div class="horizontal-scroll">
+      <!-- Project 1 Placeholder -->
+      <div class="project-item gallery-item">
+        <h4
+          data-en="Project One"
+          data-es="Proyecto Uno"
+          data-fr="Projet Un"
+          data-pt="Projeto Um"
+        >
+          Project One
+        </h4>
+        <img src="path/to/project-placeholder-1.jpg" alt="Project 1" />
+        <div class="project-links">
+          <a
+            href="#"
+            class="project-button"
+            target="_blank"
+            data-en="Website"
+            data-es="Sitio Web"
+            data-fr="Site Web"
+            data-pt="Website"
+          >
+            Website
+          </a>
+          <a
+            href="#"
+            class="project-button"
+            target="_blank"
+            data-en="GitHub"
+            data-es="GitHub"
+            data-fr="GitHub"
+            data-pt="GitHub"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 Placeholder -->
+      <div class="project-item gallery-item">
+        <h4
+          data-en="Project Two"
+          data-es="Proyecto Dos"
+          data-fr="Projet Deux"
+          data-pt="Projeto Dois"
+        >
+          Project Two
+        </h4>
+        <img src="path/to/project-placeholder-2.jpg" alt="Project 2" />
+        <div class="project-links">
+          <a
+            href="#"
+            class="project-button"
+            target="_blank"
+            data-en="Website"
+            data-es="Sitio Web"
+            data-fr="Site Web"
+            data-pt="Website"
+          >
+            Website
+          </a>
+          <a
+            href="#"
+            class="project-button"
+            target="_blank"
+            data-en="GitHub"
+            data-es="GitHub"
+            data-fr="GitHub"
+            data-pt="GitHub"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Add more project placeholders as you like -->
+    </div>
   </section>
 
   <!-- SECTION DIVIDER (Between Portfolio and Art & Design) -->
@@ -230,16 +322,16 @@
     <p
       data-en="América is a Fronteriza from San Diego, California, and the daughter of Mexican immigrants from Veracruz and Tamaulipas, Mexico. Her art delves into themes of gender fluidity and embodiment, reflecting unique non-binary humanoids in layered watercolor and gouache. Through her work, América demonstrates the beauty of fluidity and identity."
       data-es="América es Fronteriza de San Diego, California, e hija de inmigrantes mexicanos de Veracruz y Tamaulipas, México. Su arte profundiza en temas de fluidez de género y encarnación, reflejando humanoides no binarios únicos en acuarela y gouache. A través de su trabajo, América demuestra la belleza de la fluidez y la identidad."
-      data-fr="América est une Fronteriza de San Diego, Californie, et la fille d'immigrants mexicains de Veracruz et Tamaulipas, au Mexique. Son art explore les thèmes de la fluidité de genre et de l'incarnation, reflétant des humanoïdes non binaires uniques en aquarelle et gouache. Par son travail, América démontre la beauté de la fluidité et de l'identité."
-      data-pt="América é uma Fronteriza de San Diego, Califórnia, e filha de imigrantes mexicanos de Veracruz e Tamaulipas, no México. Sua arte investiga temas de fluidez de gênero e corporificação, refletindo humanoides não binários únicos em aquarela e gouache. Por meio de seu trabalho, América demonstra a beleza da fluidez e da identidade."
+      data-fr="América est une Fronteriza de San Diego, Californie, et la fille d'immigrants mexicains de Veracruz et Tamaulipas, au Mexique. Son art explore les thèmes de la fluidité de genre et de l'incarnation, reflétant des humanoïdes non binaires uniques en aquarelle et gouache. À travers son travail, América démontre la beauté de la fluidité et de l'identité."
+      data-pt="América é uma Fronteriza de San Diego, Califórnia, e filha de imigrantes mexicanos de Veracruz e Tamaulipas, no México. Sua arte explora temas de fluidez de gênero e corporificação, refletindo humanoides não binários únicos em aquarela e gouache. Por meio de seu trabalho, América demonstra a beleza da fluidez e da identidade."
     >
-      América is a Fronteriza from San Diego, California, ...
+      América is a Fronteriza from San Diego, California...
     </p>
     <p
       data-en="Below is a collection of my favorite art pieces and graphic design work. Hover over an image to enlarge it, then click to view it bigger!"
-      data-es="A continuación se muestra una colección de mis piezas de arte favoritas y trabajos de diseño gráfico. Pasa el cursor sobre una imagen para ampliarla, luego haz clic para verla más grande."
+      data-es="A continuación se muestra una colección de mis piezas de arte favoritas y trabajos de diseño gráfico. Pasa el cursor sobre una imagen para ampliarla y luego haz clic para verla más grande."
       data-fr="Voici une collection de mes pièces d'art préférées et de mes travaux de design graphique. Survolez une image pour l'agrandir, puis cliquez pour la voir en plus grand!"
-      data-pt="Abaixo está uma coleção dos meus trabalhos de arte favoritos e projetos de design gráfico. Passe o cursor sobre uma imagem para ampliá-la, depois clique para vê-la maior!"
+      data-pt="Abaixo está uma coleção dos meus trabalhos de arte favoritos e projetos de design gráfico. Passe o cursor sobre uma imagem para ampliá-la e depois clique para vê-la maior!"
     >
       Below is a collection of my favorite art pieces...
     </p>
@@ -289,7 +381,7 @@
       </div>
     </div>
 
-    <!-- A second horizontal scroll container for the animation clip(s) below the images -->
+    <!-- A second horizontal scroll container for the animation clip(s) -->
     <h3
       class="clip-header"
       data-en="Animation / Video Clip"
@@ -395,7 +487,7 @@
 
   <!-- JavaScript for scrolling & modals -->
   <script>
-    // Smooth scroll to "about" section
+    // Smoothly scroll to the "about" section when the button is clicked
     document.getElementById('toggleAbout').addEventListener('click', function() {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     });
@@ -413,16 +505,17 @@
     languageSelect.addEventListener('change', function() {
       const selectedLang = languageSelect.value; // en, es, fr, pt
 
-      // For each element that has data-en, data-es, ...
+      // For each element that has data-en, data-es, etc.
       document.querySelectorAll('[data-en]').forEach(elem => {
-        // read the attribute data-${selectedLang}
         const newText = elem.getAttribute(`data-${selectedLang}`);
         if (newText) {
-          // If it's an input/button/etc., .value; otherwise .textContent
-          if (elem.tagName.toLowerCase() === 'button'
-              || elem.tagName.toLowerCase() === 'input'
-              || elem.tagName.toLowerCase() === 'select'
-              || elem.tagName.toLowerCase() === 'textarea') {
+          // If it's an input/button, set .value; otherwise .textContent
+          if (
+            elem.tagName.toLowerCase() === 'button' ||
+            elem.tagName.toLowerCase() === 'input' ||
+            elem.tagName.toLowerCase() === 'select' ||
+            elem.tagName.toLowerCase() === 'textarea'
+          ) {
             elem.value = newText;
           } else {
             elem.textContent = newText;
