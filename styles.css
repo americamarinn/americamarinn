@@ -23,6 +23,15 @@ body {
   min-height: 100vh;
 }
 
+/*
+  SCROLL MARGIN
+  This ensures sections show up "front and center" 
+  even with a sticky nav & dividers.
+*/
+#about, #portfolio, #art-design, #contact {
+  scroll-margin-top: 100px; /* Adjust as needed */
+}
+
 /* NAVIGATION BAR */
 .navbar {
   display: flex;
@@ -146,20 +155,20 @@ body {
   flex: 1;
 }
 
-/* SECTION DIVIDER: thinner, no giant vertical stretch */
+/* SECTION DIVIDER: limit height to 45px */
 .section-divider {
   text-align: center;
   margin: 0 auto;
   max-width: 100%;
-  overflow: hidden; /* ensures we don't overflow beyond container */
+  overflow: hidden;
 }
 .section-divider img {
   width: 100%;
-  max-height: 40px;  /* limit the divider's height */
-  object-fit: cover; /* fill horizontally, clipped vertically */
+  max-height: 50px;  /* limit the divider's height */
+  object-fit: cover;
   display: block;
   margin: 0 auto;
-  opacity: 0.9;      /* optional fade effect */
+  opacity: 0.9;
 }
 
 /* FOOTER */
@@ -170,7 +179,7 @@ body {
   padding: 1rem;
 }
 
-/* HORIZONTAL SCROLL */
+/* HORIZONTAL SCROLL GALLERIES */
 .horizontal-scroll {
   display: flex;
   flex-wrap: nowrap;
@@ -213,7 +222,7 @@ body {
   display: block;
 }
 
-/* Overlay on hover */
+/* Overlays on hover */
 .overlay {
   position: absolute;
   bottom: 0;
