@@ -155,7 +155,7 @@ body {
 }
 .section-divider img {
   width: 100%;
-  max-height: 20px;  /* limit the divider's height */
+  max-height: 45px;  /* limit the divider's height */
   object-fit: cover; /* fill horizontally, clipped vertically */
   display: block;
   margin: 0 auto;
