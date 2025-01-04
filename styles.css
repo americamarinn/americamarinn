@@ -146,7 +146,21 @@ body {
   flex: 1;
 }
 
-
+/* SECTION DIVIDER: thinner, no giant vertical stretch */
+.section-divider {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden; /* ensures we don't overflow beyond container */
+}
+.section-divider img {
+  width: 100%;
+  max-height: 60px;  /* limit the divider's height */
+  object-fit: cover; /* fill horizontally, clipped vertically */
+  display: block;
+  margin: 0 auto;
+  opacity: 0.9;      /* optional fade effect */
+}
 
 /* FOOTER */
 .footer {
