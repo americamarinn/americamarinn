@@ -13,7 +13,6 @@
     <ul class="navbar-links">
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <!-- NEW Art & Design link in navigation -->
       <li><a href="#art-design">Art &amp; Design</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -89,7 +88,6 @@
     <p>
       Here is where I’ll showcase my projects and accomplishments.
     </p>
-    <!-- Update your PDF résumé link below -->
     <p>
       <strong>Résumé:</strong>
       <a href="cs- America Résumé 24.pdf" target="_blank" rel="noopener noreferrer">
@@ -120,7 +118,7 @@
 
     <!-- Horizontal scroll container for art pieces -->
     <div class="horizontal-scroll">
-      <!-- Example: Art Piece 1 -->
+      <!-- Art Piece 1 -->
       <div class="gallery-item" onclick="openModal('artModal1')">
         <img src="path/to/art-piece-1.jpg" alt="Art Piece 1" />
         <div class="overlay">
@@ -143,20 +141,18 @@
           <p>Art Piece 3</p>
         </div>
       </div>
-      <!-- Add more images as you like -->
+      <!-- Add more images if you like -->
     </div>
 
     <!-- A second horizontal scroll container for the animation clip(s) below the images -->
     <h3 class="clip-header">Animation / Video Clip</h3>
     <div class="horizontal-scroll">
-      <!-- Example: Animation Clip -->
       <div class="gallery-item" onclick="openModal('videoModal')">
         <video src="path/to/your-art-clip.mp4" muted></video>
         <div class="overlay">
           <p>My Animation Clip</p>
         </div>
       </div>
-      <!-- Add more video clips if needed -->
     </div>
   </section>
 
@@ -209,22 +205,19 @@
     }
   </script>
 
-  <!-- MODAL SECTIONS (One modal per image/video) -->
-  <!-- Art Piece 1 -->
+  <!-- MODALS -->
   <div id="artModal1" class="modal">
     <span class="close" onclick="closeModal('artModal1')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-1.jpg" alt="Art Piece 1" />
     <div class="modal-caption">Art Piece 1 - Additional details</div>
   </div>
 
-  <!-- Art Piece 2 -->
   <div id="artModal2" class="modal">
     <span class="close" onclick="closeModal('artModal2')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-2.jpg" alt="Art Piece 2" />
     <div class="modal-caption">Art Piece 2 - Additional details</div>
   </div>
 
-  <!-- Art Piece 3 -->
   <div id="artModal3" class="modal">
     <span class="close" onclick="closeModal('artModal3')">&times;</span>
     <img class="modal-content" src="path/to/art-piece-3.jpg" alt="Art Piece 3" />
