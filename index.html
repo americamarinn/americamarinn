@@ -299,8 +299,6 @@
           </a>
         </div>
       </div>
-
-      <!-- Add more project placeholders as you like -->
     </div>
   </section>
 
@@ -343,7 +341,7 @@
     <div class="horizontal-scroll">
       <!-- Art Piece 1 -->
       <div class="gallery-item" onclick="openModal('artModal1')">
-        <img src="selfportraitpic.pdf" alt="Art Piece 1" />
+        <img src="selfportraitpic.pdf" alt="Self Portrait" />
         <div
           class="overlay"
           data-en="Self Portrait"
@@ -357,7 +355,7 @@
 
       <!-- Art Piece 2 -->
       <div class="gallery-item" onclick="openModal('artModal2')">
-        <img src="slothpic.pdf" alt="Art Piece 2" />
+        <img src="slothpic.pdf" alt="Sloth" />
         <div
           class="overlay"
           data-en="Sloth"
@@ -371,30 +369,29 @@
 
       <!-- Art Piece 3 -->
       <div class="gallery-item" onclick="openModal('artModal3')">
-        <img src="amor_carnal.pdf" alt="Art Piece 3" />
+        <img src="amor_carnal.pdf" alt="Amor Carnal" />
         <div
           class="overlay"
           data-en="Amor Carnal"
-          data-es="Pieza de Arte 3"
-          data-fr="Pièce d'Art 3"
-          data-pt="Peça de Arte 3"
+          data-es="Amor Carnal"
+          data-fr="Amor Carnal"
+          data-pt="Amor Carnal"
         >
-          <p>Art Piece 3</p>
+          <p>Amor Carnal</p>
         </div>
       </div>
-    </div>
 
-    <!-- Art Piece 4 -->
-      <div class="gallery-item" onclick="openModal('artModal3')">
-        <img src="sketches.pdf" alt="Art Piece 4" />
+      <!-- Art Piece 4 -->
+      <div class="gallery-item" onclick="openModal('artModal4')">
+        <img src="sketches.pdf" alt="Multimedia sketches" />
         <div
           class="overlay"
           data-en="Multimedia sketches"
-          data-es="Pieza de Arte 4"
-          data-fr="Pièce d'Art 4"
-          data-pt="Peça de Arte 4"
+          data-es="Bocetos Multimedia"
+          data-fr="Esquisses Multimédia"
+          data-pt="Esboços Multimídia"
         >
-          <p>Art Piece 4</p>
+          <p>Multimedia sketches</p>
         </div>
       </div>
     </div>
@@ -410,27 +407,27 @@
       Animation / Video Clip
     </h3>
     <div class="horizontal-scroll">
-      <div class="gallery-item" onclick="openModal('videoModal')">
+      <div class="gallery-item" onclick="openModal('videoModal1')">
         <video src="First_animation_ 2.mp4" muted></video>
         <div
           class="overlay"
           data-en="timelapse of animation"
-          data-es="Mi Clip de Animación"
-          data-fr="Mon Clip d'Animation"
-          data-pt="Meu Clipe de Animação"
+          data-es="Timelapse de Animación"
+          data-fr="Timelapse d'Animation"
+          data-pt="Timelapse de Animação"
         >
           <p>My Animation Clip</p>
         </div>
       </div>
 
-      <div class="gallery-item" onclick="openModal('videoModal')">
+      <div class="gallery-item" onclick="openModal('videoModal2')">
         <video src="skating_@_chicano.mp4" muted></video>
         <div
           class="overlay"
-          data-en="skating @ chicano prk"
-          data-es="Mi Clip de Animación"
-          data-fr="Mon Clip d'Animation"
-          data-pt="Meu Clipe de Animação"
+          data-en="Skating @ Chicano Park"
+          data-es="Patinando @ Chicano Park"
+          data-fr="Skate @ Chicano Park"
+          data-pt="Skate @ Chicano Park"
         >
           <p>My Animation Clip</p>
         </div>
@@ -557,90 +554,95 @@
   </script>
 
   <!-- MODALS -->
+  <!-- Art Modals -->
   <div id="artModal1" class="modal">
     <span class="close" onclick="closeModal('artModal1')">&times;</span>
-    <img class="modal-content" src="selfportraitpic.pdf" alt="Art Piece 1" />
+    <img class="modal-content" src="selfportraitpic.pdf" alt="Self Portrait" />
     <div
       class="modal-caption"
-      data-en="Art Piece 1 - Additional details"
-      data-es="Pieza de Arte 1 - Detalles adicionales"
-      data-fr="Pièce d'Art 1 - Détails supplémentaires"
-      data-pt="Peça de Arte 1 - Detalhes adicionais"
+      data-en="Self Portrait - Additional details"
+      data-es="Autorretrato - Detalles adicionales"
+      data-fr="Autoportrait - Détails supplémentaires"
+      data-pt="Auto-Retrato - Detalhes adicionais"
     >
-      Art Piece 1 - Additional details
+      Self Portrait - Additional details
     </div>
   </div>
 
   <div id="artModal2" class="modal">
     <span class="close" onclick="closeModal('artModal2')">&times;</span>
-    <img class="modal-content" src="slothpic.pdf" alt="Art Piece 2" />
+    <img class="modal-content" src="slothpic.pdf" alt="Sloth" />
     <div
       class="modal-caption"
-      data-en="Art Piece 2 - Additional details"
-      data-es="Pieza de Arte 2 - Detalles adicionales"
-      data-fr="Pièce d'Art 2 - Détails supplémentaires"
-      data-pt="Peça de Arte 2 - Detalhes adicionais"
+      data-en="Sloth - Additional details"
+      data-es="Pereza - Detalles adicionales"
+      data-fr="Paresse - Détails supplémentaires"
+      data-pt="Preguiça - Detalhes adicionais"
     >
-      Art Piece 2 - Additional details
+      Sloth - Additional details
     </div>
   </div>
 
   <div id="artModal3" class="modal">
     <span class="close" onclick="closeModal('artModal3')">&times;</span>
-    <img class="modal-content" src="amor_carnal.pdf" alt="Art Piece 3" />
+    <img class="modal-content" src="amor_carnal.pdf" alt="Amor Carnal" />
     <div
       class="modal-caption"
-      data-en="amor_carnal - Additional details"
-      data-es="amor_carnal - Detalles adicionales"
-      data-fr="amor_carnal- Détails supplémentaires"
-      data-pt="amor_carnal - Detalhes adicionais"
+      data-en="Amor Carnal - Additional details"
+      data-es="Amor Carnal - Detalles adicionales"
+      data-fr="Amor Carnal - Détails supplémentaires"
+      data-pt="Amor Carnal - Detalhes adicionais"
     >
-      Art Piece 3 - Additional details
+      Amor Carnal - Additional details
     </div>
   </div>
 
-  <div id="artModal3" class="modal">
-    <span class="close" onclick="closeModal('artModal3')">&times;</span>
-    <img class="modal-content" src="sketches.pdf" alt="Art Piece 4" />
+  <div id="artModal4" class="modal">
+    <span class="close" onclick="closeModal('artModal4')">&times;</span>
+    <img class="modal-content" src="sketches.pdf" alt="Multimedia sketches" />
     <div
       class="modal-caption"
-      data-en="Art Piece 4 - Additional details"
-      data-es="Pieza de Arte 4 - Detalles adicionales"
-      data-fr="Pièce d'Art 4 - Détails supplémentaires"
-      data-pt="Peça de Arte 4 - Detalhes adicionais"
+      data-en="Multimedia sketches - Additional details"
+      data-es="Bocetos Multimedia - Detalles adicionales"
+      data-fr="Esquisses Multimédia - Détails supplémentaires"
+      data-pt="Esboços Multimídia - Detalhes adicionais"
     >
-      Art Piece 4 - Additional details
+      Multimedia sketches - Additional details
     </div>
   </div>
 
-  <!-- Video Modal -->
-  <div id="videoModal" class="modal">
-    <span class="close" onclick="closeModal('videoModal')">&times;</span>
+  <!-- Video Modals -->
+  <div id="videoModal1" class="modal">
+    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
     <video class="modal-content" controls>
       <source src="First_animation_ 2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div
       class="modal-caption"
-      data-en="Animation Clip - Some details"
-      data-es="Clip de Animación - Algunos detalles"
-      data-fr="Clip d'Animation - Quelques détails"
-      data-pt="Clipe de Animação - Alguns detalhes"
+      data-en="Animation Clip - Timelapse of animation"
+      data-es="Clip de Animación - Timelapse"
+      data-fr="Clip d'Animation - Timelapse"
+      data-pt="Clipe de Animação - Timelapse"
     >
-      Animation Clip - Some details
+      Animation Clip - Timelapse of animation
     </div>
+  </div>
+
+  <div id="videoModal2" class="modal">
+    <span class="close" onclick="closeModal('videoModal2')">&times;</span>
     <video class="modal-content" controls>
       <source src="skating_@_chicano.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div
       class="modal-caption"
-      data-en="Animation Clip - Some details"
-      data-es="Clip de Animación - Algunos detalles"
-      data-fr="Clip d'Animation - Quelques détails"
-      data-pt="Clipe de Animação - Alguns detalhes"
+      data-en="Animation Clip - Skating @ Chicano Park"
+      data-es="Clip de Animación - Patinando @ Chicano Park"
+      data-fr="Clip d'Animation - Skate @ Chicano Park"
+      data-pt="Clipe de Animação - Skate @ Chicano Park"
     >
-      Animation Clip - Some details
+      Animation Clip - Skating @ Chicano Park
     </div>
   </div>
 </body>

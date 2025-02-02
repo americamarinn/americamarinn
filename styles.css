@@ -272,7 +272,7 @@ body {
 
 /* Center the subsection heading */
 .clip-header {
-  text-align: center;   /* center the "Experience & Projects" text */
+  text-align: center;
   margin: 2rem 0;       /* add vertical spacing */
   font-size: 1.4rem;    /* slightly bigger font */
   font-weight: bold;
@@ -295,7 +295,7 @@ body {
   width: 260px;             /* adjust as desired for your layout */
   height: 380px;            /* taller rectangle */
   padding: 1rem;
-  margin: 0 auto;           /* center item in its container if any extra space */
+  margin: 0 auto;           /* center item if container is wide */
   box-sizing: border-box;
   cursor: default;          /* no pointer if it doesn't open a modal */
 }
@@ -308,11 +308,11 @@ body {
   text-align: center;
 }
 
-/* Project Image in the middle (slightly smaller/bigger as needed) */
+/* Project Image in the middle */
 .project-item img {
   width: 100%;
   height: auto;     
-  max-height: 180px; /* ensure it fits in the container's height nicely */
+  max-height: 180px; 
   object-fit: cover;
   border-radius: 8px;
 }
@@ -324,7 +324,7 @@ body {
   margin-top: 1rem;  /* space above buttons */
 }
 
-/* Matching style for Website/GitHub buttons (like "Learn More About Me") */
+/* Matching style for Website/GitHub buttons */
 .project-button {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #fff;
@@ -362,6 +362,7 @@ body {
   max-width: 80%;
   border: 5px double var(--primary-color);
   border-radius: 10px;
+  background-color: #000; /* for videos, ensures black background behind them */
 }
 .modal-caption {
   text-align: center;
