@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <div class="announcement-banner" id="announcementBanner">
+  
+  <!-- Floating Banner in the top-right corner -->
+  <div class="floating-banner" id="floatingBanner">
     <p>
       América is still working on her website and tweaking professional docs;
-      reach out to her for the most up to date information through any contact
-      in the contact section!
+      reach out for the most up-to-date info in the contact section!
     </p>
-    <button class="banner-close" onclick="closeAnnouncement()">&times;</button>
+    <button class="floating-banner-close" onclick="closeFloatingBanner()">&times;</button>
   </div>
+
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="brand-title">América Marín Reyes</div>
@@ -535,6 +536,10 @@
     }
     function closeModal(modalId) {
       document.getElementById(modalId).style.display = 'none';
+    }
+
+    function closeFloatingBanner() {
+    document.getElementById('floatingBanner').style.display = 'none';
     }
 
     // Basic translation logic
