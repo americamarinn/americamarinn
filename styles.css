@@ -383,3 +383,35 @@ body {
 .close:hover {
   color: #ccc;
 }
+
+/* ANNOUNCEMENT BANNER */
+.announcement-banner {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: relative; /* lets us position the close button */
+}
+
+.announcement-banner p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Close button (“X”) in the top-right corner */
+.banner-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.banner-close:hover {
+  opacity: 0.8;
+}
