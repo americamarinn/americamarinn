@@ -2,662 +2,362 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>América Marín Reyes - Home</title>
-  <!-- Link to your external CSS file -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>América Marín Reyes — Portfolio</title>
+  <meta name="description" content="CS × Design × Research at Brown — projects, art, and case studies by América Marín Reyes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Open Graph (nice link previews) -->
+  <meta property="og:title" content="América Marín Reyes — Portfolio" />
+  <meta property="og:description" content="CS × Design × Research at Brown — projects, art, and case studies." />
+  <meta property="og:image" content="/assets/og-cover.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#fffdf9;
+      --ink:#1f2328;
+      --muted:#5b6066;
+      --brand:#6b5cff; /* accent */
+      --brand-ink:#fff;
+      --card:#ffffff;
+      --border:#e9e5df;
+      --pill:#f3f0ff;
+      --shadow:0 6px 24px rgba(31,35,40,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;}
+    img{max-width:100%;display:block;height:auto}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:40;background:rgba(255,253,249,0.8);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{font-family:"Playfair Display",serif;font-weight:700;font-size:1.25rem}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{padding:8px 10px;border-radius:10px}
+    .nav-links a:hover{background:var(--pill)}
+    .resume-btn{background:var(--brand);color:var(--brand-ink);padding:10px 14px;border-radius:12px;font-weight:600}
+
+    /* Lang select */
+    .lang{display:flex;gap:8px;align-items:center}
+    .lang select{appearance:none;border:1px solid var(--border);background:#fff;padding:8px 10px;border-radius:10px}
+
+    /* HERO */
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+    .title{font-family:"Playfair Display",serif;font-size:2.4rem;line-height:1.15;margin:0 0 8px}
+    .subtitle{font-size:1.05rem;color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn{border:1px solid var(--border);padding:10px 14px;border-radius:12px}
+    .btn.primary{background:var(--brand);color:var(--brand-ink);border-color:transparent}
+    .headshot{border-radius:22px;box-shadow:var(--shadow);}
+
+    /* QUICK FACTS */
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 8px}
+    .fact{background:var(--card);border:1px solid var(--border);padding:12px 14px;border-radius:14px;box-shadow:var(--shadow);font-size:.95rem}
+
+    /* HIGHLIGHTS */
+    .section{padding:32px 0}
+    .section h2{font-family:"Playfair Display",serif;font-size:1.6rem;margin:0 0 12px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+    .card img{aspect-ratio:16/10;object-fit:cover}
+    .card-body{padding:14px}
+    .card h3{margin:0 0 6px;font-size:1.1rem}
+    .card p{margin:0 0 10px;color:var(--muted);font-size:.95rem}
+    .pills{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{background:var(--pill);padding:6px 10px;border-radius:999px;font-size:.8rem}
+
+    /* DUAL‑TRACK HUB */
+    .hub{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .hub .panel{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:18px}
+    .panel h3{margin:0 0 6px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .tile{border:1px solid var(--border);border-radius:14px;padding:12px}
+    .tile h4{margin:0 0 4px;font-size:1rem}
+    .tile .meta{color:var(--muted);font-size:.88rem}
+
+    /* RESEARCH STRIP */
+    .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .strip .tile{display:flex;gap:10px}
+
+    /* ABOUT + CONTACT */
+    .about{display:grid;grid-template-columns:.6fr 1.4fr;gap:24px;align-items:center}
+    .about img{border-radius:50%;box-shadow:var(--shadow)}
+    .contact a{color:var(--brand);text-decoration:underline}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:18px 0;margin-top:24px;color:var(--muted);font-size:.9rem}
+
+    /* RESPONSIVE */
+    @media (max-width: 960px){
+      .hero-grid{grid-template-columns:1fr}
+      .facts{grid-template-columns:repeat(2,1fr)}
+      .cards{grid-template-columns:1fr 1fr}
+      .hub{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .strip{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 560px){
+      .cards{grid-template-columns:1fr}
+      .facts{grid-template-columns:1fr}
+      .strip{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Floating Banner in the top-right corner -->
-  <div class="floating-banner" id="floatingBanner">
-    <p>
-      América is still working on her website and tweaking professional docs;
-      reach out for the most up-to-date info in the contact section!
-    </p>
-    <button class="floating-banner-close" onclick="closeFloatingBanner()">&times;</button>
-  </div>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="brand-title">América Marín Reyes</div>
-    <ul class="navbar-links">
-      <!-- Each link has data attributes for translations -->
-      <li>
-        <a
-          href="#about"
-          data-en="About"
-          data-es="Sobre Mí"
-          data-fr="À Propos"
-          data-pt="Sobre Mim"
-        >
-          About
-        </a>
-      </li>
-      <li>
-        <a
-          href="#portfolio"
-          data-en="Portfolio"
-          data-es="Portafolio"
-          data-fr="Portefeuille"
-          data-pt="Portfólio"
-        >
-          Portfolio
-        </a>
-      </li>
-      <li>
-        <a
-          href="#art-design"
-          data-en="Art &amp; Design"
-          data-es="Arte &amp; Diseño"
-          data-fr="Art &amp; Design"
-          data-pt="Arte &amp; Design"
-        >
-          Art &amp; Design
-        </a>
-      </li>
-      <li>
-        <a
-          href="#contact"
-          data-en="Contact"
-          data-es="Contacto"
-          data-fr="Contact"
-          data-pt="Contato"
-        >
-          Contact
-        </a>
-      </li>
-    </ul>
-
-    <!-- Translation Dropdown -->
-    <div class="translate-container">
-      <label for="languageSelect" class="visually-hidden">Select Language</label>
-      <!-- English is default (selected) -->
-      <select id="languageSelect">
-        <option value="en" selected>English</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="pt">Português</option>
-      </select>
-    </div>
-  </nav>
-
-  <!-- Hero / Header Section -->
-  <header class="hero">
-    <!-- Left side: Name & Welcome -->
-    <div class="hero-content">
-      <h1
-        class="hero-title"
-        data-en="América Marín Reyes"
-        data-es="América Marín Reyes"
-        data-fr="América Marín Reyes"
-        data-pt="América Marín Reyes"
-      >
-        América Marín Reyes
-      </h1>
-      <p
-        class="hero-subtitle"
-        data-en="Bridging the worlds of technology and creativity, I explore the intersection of design, software, and identity."
-        data-es="Uniendo los mundos de la tecnología y la creatividad, exploro la intersección del diseño, el software y la identidad."
-        data-fr="En reliant les mondes de la technologie et de la créativité, j'explore l'intersection du design, du logiciel et de l'identité."
-        data-pt="Conectando os mundos da tecnologia e da criatividade, exploro a interseção de design, software e identidade."
-      >
-        Bridging the worlds of technology and creativity, 
-        I explore the intersection of design, software, and identity.
-      </p>
-      <!-- Button that scrolls to the About section -->
-      <button
-        id="toggleAbout"
-        class="toggle-button"
-        data-en="Learn More About Me"
-        data-es="Conoce Más Sobre Mí"
-        data-fr="En Savoir Plus Sur Moi"
-        data-pt="Saiba Mais Sobre Mim"
-      >
-        Learn More About Me
-      </button>
-    </div>
-
-    <!-- Right side: Headshot -->
-    <div class="hero-image">
-      <img
-        src="headshot.heic"
-        alt="Headshot of América"
-        class="headshot framed"
-      />
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">América Marín Reyes</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#highlights" data-i18n-key="nav_highlights" data-en="Highlights" data-es="Destacados" data-fr="À la une" data-pt="Destaques">Highlights</a>
+        <a href="#engineering" data-i18n-key="nav_engineering" data-en="Engineering" data-es="Ingeniería" data-fr="Ingénierie" data-pt="Engenharia">Engineering</a>
+        <a href="#art" data-i18n-key="nav_art" data-en="Art & Design" data-es="Arte y Diseño" data-fr="Art & Design" data-pt="Arte & Design">Art & Design</a>
+        <a href="#research" data-i18n-key="nav_research" data-en="Research" data-es="Investigación" data-fr="Recherche" data-pt="Pesquisa">Research</a>
+        <a href="#about" data-i18n-key="nav_about" data-en="About" data-es="Sobre mí" data-fr="À propos" data-pt="Sobre">About</a>
+        <a href="#contact" data-i18n-key="nav_contact" data-en="Contact" data-es="Contacto" data-fr="Contact" data-pt="Contato">Contact</a>
+        <a class="resume-btn" href="America_Marin_Resume.pdf" target="_blank" rel="noopener" data-i18n-key="nav_resume" data-en="Resume" data-es="Currículum" data-fr="CV" data-pt="Currículo">Resume</a>
+        <span class="lang">
+          <label for="lang" class="visually-hidden">Language</label>
+          <select id="lang" aria-label="Language selector">
+            <option value="en" selected>EN</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+            <option value="pt">PT</option>
+          </select>
+        </span>
+      </nav>
     </div>
   </header>
 
-  <!-- SECTION DIVIDER (Between Hero and About) -->
-  <div class="section-divider">
-    <img src="hey.png" alt="Section Divider" />
-  </div>
+  <main id="home" class="container" role="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div>
+          <h1 id="hero-title" class="title" data-i18n-key="hero_name" data-en="América Marín Reyes" data-es="América Marín Reyes" data-fr="América Marín Reyes" data-pt="América Marín Reyes">América Marín Reyes</h1>
+          <p class="subtitle" data-i18n-key="hero_tag" data-en="CS × Design at Brown. I build thoughtful software and visuals that explore identity and usability." data-es="CS × Diseño en Brown. Construyo software y visuales que exploran identidad y usabilidad." data-fr="CS × Design à Brown. Je conçois des logiciels et visuels qui explorent l'identité et l'utilisabilité." data-pt="CS × Design em Brown. Construo software e visuais que exploram identidade e usabilidade.">CS × Design at Brown. I build thoughtful software and visuals that explore identity and usability.</p>
+          <div class="cta">
+            <a class="btn primary" href="#highlights" data-i18n-key="cta_view_highlights" data-en="See Highlights" data-es="Ver destacados" data-fr="Voir les points forts" data-pt="Ver destaques">See Highlights</a>
+            <a class="btn" href="mailto:america_marin@brown.edu" aria-label="Email América">Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/america-marin-65b5b5297" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
+            <a class="btn" href="https://americamarinn.github.io/americamarinn/" target="_blank" rel="noopener" aria-label="Website archive">Archive</a>
+          </div>
+          
+          <!-- QUICK FACTS -->
+          <div class="facts" aria-label="Quick facts">
+            <div class="fact">Brown University · CS & Linguistic Anthropology · <strong>Spring 2026</strong></div>
+            <div class="fact">Based in Providence / San Diego</div>
+            <div class="fact">Roles: SWE · Front‑End · Design Technologist</div>
+            <div class="fact">Testing: Playwright, Jest · Accessibility‑minded</div>
+          </div>
+        </div>
+        <div>
+          <!-- Replace with JPG/PNG (avoid HEIC) -->
+          <img class="headshot" src="/assets/headshot.jpg" alt="Portrait of América Marín Reyes" loading="lazy" />
+        </div>
+      </div>
+    </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="page-section about-container">
-    <!-- Oval image on left -->
-    <div class="about-image">
-      <img 
-        src="IMG_2959.HEIC" 
-        alt="Another headshot in oval style" 
-        class="oval-image" 
-      />
-    </div>
+    <!-- TOP 3 HIGHLIGHTS -->
+    <section id="highlights" class="section" aria-labelledby="highlights-title">
+      <h2 id="highlights-title" data-i18n-key="section_highlights" data-en="Highlights" data-es="Destacados" data-fr="À la une" data-pt="Destaques">Highlights</h2>
+      <div class="cards">
+        <!-- SWE highlight -->
+        <article class="card">
+          <img src="/assets/highlight-acs.jpg" alt="Dashboard tiles and API diagram" loading="lazy" />
+          <div class="card-body">
+            <h3>API Proxy + Caching for Census ACS</h3>
+            <p>Reduced duplicate network calls with a cache layer; integration tests and mock data for reliability.</p>
+            <div class="pills">
+              <span class="pill">Java</span><span class="pill">SparkJava</span><span class="pill">LRU Cache</span>
+            </div>
+            <p style="margin-top:10px"><a href="#engineering" class="btn">View in Engineering</a></p>
+          </div>
+        </article>
+        <!-- Front‑End highlight -->
+        <article class="card">
+          <img src="/assets/highlight-frontend.jpg" alt="Responsive charts on phone and desktop" loading="lazy" />
+          <div class="card-body">
+            <h3>React/TS Data Viz App</h3>
+            <p>Mobile‑friendly dashboards with Chart.js and Playwright E2E tests.</p>
+            <div class="pills">
+              <span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Playwright</span>
+            </div>
+            <p style="margin-top:10px"><a href="#engineering" class="btn">View in Engineering</a></p>
+          </div>
+        </article>
+        <!-- Art/Research highlight -->
+        <article class="card">
+          <img src="/assets/highlight-art.jpg" alt="Watercolor/gouache figure composition" loading="lazy" />
+          <div class="card-body">
+            <h3>Embodiment Series (Watercolor/Gouache)</h3>
+            <p>Exploring fronteriza identity and gender embodiment through layered media.</p>
+            <div class="pills">
+              <span class="pill">Illustration</span><span class="pill">Curation</span>
+            </div>
+            <p style="margin-top:10px"><a href="#art" class="btn">View in Art & Design</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <!-- About text on the right -->
-    <div class="about-text">
-      <h2
-        data-en="About Me" 
-        data-es="Sobre Mí" 
-        data-fr="À Propos" 
-        data-pt="Sobre Mim"
-      >
-        About Me
-      </h2>
-      <p
-        data-en="Hello and welcome! This is my personal website where I share a bit about myself, my work, and my interests. My name is América Marín Reyes, and I am currently a third-year student at Brown University studying Computer Science and (Linguistic) Anthropology BA. I demonstrate a profound interest in utilizing software and graphic design skills as catalysts for societal transformation."
-        data-es="¡Hola y bienvenidos! Este es mi sitio web personal donde comparto un poco sobre mí, mi trabajo y mis intereses. Mi nombre es América Marín Reyes y actualmente soy estudiante de tercer año en la Universidad Brown, estudiando Ciencias de la Computación y (Antropología Lingüística). Demuestro un gran interés en utilizar habilidades de software y diseño gráfico como catalizadores de la transformación social."
-        data-fr="Bonjour et bienvenue! Ceci est mon site personnel où je partage un peu de moi, de mon travail et de mes intérêts. Je m'appelle América Marín Reyes et je suis actuellement en troisième année à l'Université Brown, étudiant l'informatique et l'anthropologie (linguistique). Je montre un vif intérêt pour l'utilisation de compétences en logiciels et en design graphique comme catalyseurs de la transformation sociale."
-        data-pt="Olá e bem-vindo! Este é o meu site pessoal onde compartilho um pouco sobre mim, meu trabalho e meus interesses. Meu nome é América Marín Reyes e estou atualmente no terceiro ano na Universidade Brown, estudando Ciência da Computação e Antropologia (Linguística). Demonstro um grande interesse em utilizar habilidades de software e design gráfico como catalisadores de transformação social."
-      >
-      Hello and welcome! This is my personal website where I share a bit about myself, my work, 
-      and my interests. My name is América Marín Reyes, and I am currently a third-year student 
-      at Brown University studying Computer Science and (Linguistic) Anthropology BA. I demonstrate
-      a profound interest in utilizing software and graphic design skills as catalysts for societal
-      transformation.
+    <!-- DUAL‑TRACK HUBS -->
+    <section class="section" aria-labelledby="hubs-title">
+      <h2 id="hubs-title">Engineering × Art & Design</h2>
+      <div class="hub">
+        <!-- ENGINEERING HUB -->
+        <div id="engineering" class="panel" aria-labelledby="eng-title">
+          <h3 id="eng-title">Engineering</h3>
+          <p class="subtitle" style="margin:4px 0 10px">Web · Systems · Data · Testing</p>
+          <div class="grid">
+            <article class="tile">
+              <h4>API Proxy + Caching for ACS</h4>
+              <div class="meta">Java · SparkJava · LRU · Tests</div>
+              <p>Cache‑through adapter, mock data, and integration tests for reliability and speed.</p>
+              <p><a class="btn" href="#">Case Study</a> <a class="btn" href="#">GitHub</a></p>
+            </article>
+            <article class="tile">
+              <h4>Front‑End Viz App</h4>
+              <div class="meta">React · TS · Chart.js · Playwright</div>
+              <p>Responsive charts, error handling, and CI E2E tests.</p>
+              <p><a class="btn" href="#">Demo</a> <a class="btn" href="#">GitHub</a></p>
+            </article>
+            <article class="tile">
+              <h4>Kernel (WeensyOS) Leak Hunt</h4>
+              <div class="meta">C/C++ · Low‑level · Debugging</div>
+              <p>Tracked memory leaks and fixed lifetime issues in a teaching kernel.</p>
+              <p><a class="btn" href="#">Notes</a></p>
+            </article>
+            <article class="tile">
+              <h4>Ray Tracer “Illuminate”</h4>
+              <div class="meta">C++ · GLSL · Rendering</div>
+              <p>Extended from Intersect: BRDF, reflections, lights, and performance profiling.</p>
+              <p><a class="btn" href="#">Gallery</a></p>
+            </article>
+          </div>
+        </div>
+
+        <!-- ART & DESIGN HUB -->
+        <div id="art" class="panel" aria-labelledby="art-title">
+          <h3 id="art-title">Art & Design</h3>
+          <p class="subtitle" style="margin:4px 0 10px">Illustration · Branding · Motion</p>
+          <div class="grid">
+            <article class="tile">
+              <h4>Embodiment Series</h4>
+              <div class="meta">Watercolor · Gouache</div>
+              <p>Feminine complexities and fluid identities in layered media.</p>
+              <p><a class="btn" href="#">Lightbox</a></p>
+            </article>
+            <article class="tile">
+              <h4>HONOR Pilates</h4>
+              <div class="meta">Branding · Web visuals</div>
+              <p>Logo, palette, and templates; neutral pastels and curved serif details.</p>
+              <p><a class="btn" href="#">Case Study</a></p>
+            </article>
+            <article class="tile">
+              <h4>Animation: Timelapse</h4>
+              <div class="meta">Motion</div>
+              <p>Short process clip; compositing practice and pacing.</p>
+              <p><a class="btn" href="#">Watch</a></p>
+            </article>
+            <article class="tile">
+              <h4>Skating @ Chicano Park</h4>
+              <div class="meta">Video</div>
+              <p>Color grading study; park murals as backdrop.</p>
+              <p><a class="btn" href="#">Watch</a></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH STRIP -->
+    <section id="research" class="section" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
+      <div class="strip">
+        <article class="tile">
+          <div>
+            <h4>Latine & Indigenous Identity</h4>
+            <div class="meta">Abstract + Slides</div>
+            <p>On fronteriza identity and language revitalization tensions.</p>
+            <p><a class="btn" href="#">Read</a></p>
+          </div>
+        </article>
+        <article class="tile">
+          <div>
+            <h4>Embodiment & Media</h4>
+            <div class="meta">Short Essay</div>
+            <p>How visual choices shape perception and self‑presentation.</p>
+            <p><a class="btn" href="#">Read</a></p>
+          </div>
+        </article>
+        <article class="tile">
+          <div>
+            <h4>Substance Use & Belonging</h4>
+            <div class="meta">Annotated Bib</div>
+            <p>Family, gender, and cultural values in rehab experiences.</p>
+            <p><a class="btn" href="#">Read</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <img src="/assets/about-portrait.jpg" alt="América smiling, portrait" loading="lazy" width="320" height="320" />
+      <div>
+        <h2 id="about-title" data-i18n-key="about_heading" data-en="About Me" data-es="Sobre mí" data-fr="À propos" data-pt="Sobre mim">About Me</h2>
+        <p>Fronteriza from San Diego, CA; daughter of Mexican immigrants (Veracruz & Tamaulipas). I study CS and Linguistic Anthropology at Brown. I like building accessible interfaces, tested data flows, and visual stories that explore identity.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n-key="contact_heading" data-en="Contact" data-es="Contacto" data-fr="Contact" data-pt="Contato">Contact</h2>
+      <p><strong>América Marín</strong><br />
+        <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a> · <a href="https://www.linkedin.com/in/america-marin-65b5b5297" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/americamarinn" target="_blank" rel="noopener">GitHub</a>
       </p>
-      <p
-        data-en="I also engage in rigorous research endeavors pertaining to Latine and Indigenous identity, reflecting my dedication to scholarly exploration. Furthermore, I display a passion for linguistic acquisition and its pragmatic application within professional spheres."
-        data-es="También participo en esfuerzos de investigación rigurosos relacionados con la identidad latina e indígena, lo que refleja mi dedicación a la exploración académica. Además, muestro pasión por la adquisición lingüística y su aplicación pragmática en contextos profesionales."
-        data-fr="Je m'engage également dans des recherches rigoureuses portant sur l'identité latine et autochtone, reflétant mon dévouement à l'exploration universitaire. De plus, je fais preuve d'une passion pour l'acquisition linguistique et son application pragmatique dans le domaine professionnel."
-        data-pt="Também me envolvo em pesquisas rigorosas relacionadas à identidade latina e indígena, refletindo minha dedicação à exploração acadêmica. Além disso, demonstro paixão pela aquisição linguística e sua aplicação pragmática em contextos profissionais."
-      >
-      I also engage in rigorous research endeavors pertaining to Latine and Indigenous identity, 
-      reflecting my dedication to scholarly exploration. Furthermore, I display a passion for 
-      linguistic acquisition and its pragmatic application within professional spheres.
-      </p>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- SECTION DIVIDER (Between About and Portfolio) -->
-  <div class="section-divider">
-    <img src="hey.png" alt="Section Divider" />
-  </div>
-
-  <!-- PORTFOLIO SECTION -->
-  <section id="portfolio" class="page-section">
-    <h2
-      data-en="Portfolio"
-      data-es="Portafolio"
-      data-fr="Portefeuille"
-      data-pt="Portfólio"
-    >
-      Portfolio
-    </h2>
-    <p
-      data-en="Here is where I’ll showcase my projects and accomplishments."
-      data-es="Aquí es donde mostraré mis proyectos y logros."
-      data-fr="C'est ici que je présenterai mes projets et mes réalisations."
-      data-pt="É aqui que vou mostrar meus projetos e conquistas."
-    >
-      Here is where I’ll showcase my projects and accomplishments.
-    </p>
-    <p>
-      <strong
-        data-en="Résumé:"
-        data-es="Currículum:"
-        data-fr="CV :"
-        data-pt="Currículo:"
-      >
-        Résumé:
-      </strong>
-      <acs-
-        href="Marin,America resume .pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        data-en="View or Download My Résumé"
-        data-es="Ver o Descargar Mi Currículum"
-        data-fr="Voir ou Télécharger Mon CV"
-        data-pt="Ver ou Baixar Meu Currículo"
-      >
-        View or Download My Résumé
-      </a>
-    </p>
-
-    <!-- NEW SUBSECTION: EXPERIENCE & PROJECTS -->
-    <h3
-      class="clip-header"
-      data-en="Experience & Projects"
-      data-es="Experiencia & Proyectos"
-      data-fr="Expérience & Projets"
-      data-pt="Experiência & Projetos"
-    >
-      Experience &amp; Projects
-    </h3>
-
-    <!-- Horizontal scroll container for projects -->
-    <div class="horizontal-scroll">
-      <!-- Project 1 Placeholder -->
-      <div class="project-item gallery-item">
-        <h4
-          data-en="Project One"
-          data-es="Proyecto Uno"
-          data-fr="Projet Un"
-          data-pt="Projeto Um"
-        >
-          Project One
-        </h4>
-        <img src="path/to/project-placeholder-1.jpg" alt="Project 1" />
-        <div class="project-links">
-          <a
-            href="#"
-            class="project-button"
-            target="_blank"
-            data-en="Website"
-            data-es="Sitio Web"
-            data-fr="Site Web"
-            data-pt="Website"
-          >
-            Website
-          </a>
-          <a
-            href="#"
-            class="project-button"
-            target="_blank"
-            data-en="GitHub"
-            data-es="GitHub"
-            data-fr="GitHub"
-            data-pt="GitHub"
-          >
-            GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2 Placeholder -->
-      <div class="project-item gallery-item">
-        <h4
-          data-en="Project Two"
-          data-es="Proyecto Dos"
-          data-fr="Projet Deux"
-          data-pt="Projeto Dois"
-        >
-          Project Two
-        </h4>
-        <img src="path/to/project-placeholder-2.jpg" alt="Project 2" />
-        <div class="project-links">
-          <a
-            href="#"
-            class="project-button"
-            target="_blank"
-            data-en="Website"
-            data-es="Sitio Web"
-            data-fr="Site Web"
-            data-pt="Website"
-          >
-            Website
-          </a>
-          <a
-            href="#"
-            class="project-button"
-            target="_blank"
-            data-en="GitHub"
-            data-es="GitHub"
-            data-fr="GitHub"
-            data-pt="GitHub"
-          >
-            GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION DIVIDER (Between Portfolio and Art & Design) -->
-  <div class="section-divider">
-    <img src="hey.png" alt="Section Divider" />
-  </div>
-
-  <!-- ART & DESIGN GALLERY SECTION -->
-  <section id="art-design" class="page-section">
-    <h2
-      data-en="Art & Design"
-      data-es="Arte y Diseño"
-      data-fr="Art & Design"
-      data-pt="Arte & Design"
-    >
-      Art &amp; Design
-    </h2>
-    <p
-      data-en="América is a Fronteriza from San Diego, California, and the daughter of Mexican immigrants from Veracruz and Tamaulipas, Mexico. Her art delves into themes of gender fluidity and embodiment, reflecting unique non-binary humanoids in layered watercolor and gouache. Through her work, América demonstrates the beauty of fluidity and identity."
-      data-es="América es Fronteriza de San Diego, California, e hija de inmigrantes mexicanos de Veracruz y Tamaulipas, México. Su arte profundiza en temas de fluidez de género y encarnación, reflejando humanoides no binarios únicos en acuarela y gouache. A través de su trabajo, América demuestra la belleza de la fluidez y la identidad."
-      data-fr="América est une Fronteriza de San Diego, Californie, et la fille d'immigrants mexicains de Veracruz et Tamaulipas, au Mexique. Son art explore les thèmes de la fluidité de genre et de l'incarnation, reflétant des humanoïdes non binaires uniques en aquarelle et gouache. À travers son travail, América démontre la beauté de la fluidité et de l'identité."
-      data-pt="América é uma Fronteriza de San Diego, Califórnia, e filha de imigrantes mexicanos de Veracruz e Tamaulipas, no México. Sua arte explora temas de fluidez de gênero e corporificação, refletindo humanoides não binários únicos em aquarela e gouache. Por meio de seu trabalho, América demonstra a beleza da fluidez e da identidade."
-    >
-    América is a Fronteriza from San Diego, California, and the daughter of Mexican immigrants from Veracruz and Tamaulipas,
-    Mexico. Her art delves into themes of gender embodiment, reflecting feminine complexities in layered
-    watercolor and gouache. Through her work, América demonstrates the beauty of fluidity and identity.
-    </p>
-    <p
-      data-en="Below is a collection of my favorite art pieces and graphic design work. Hover over an image to enlarge it, then click to view it bigger!"
-      data-es="A continuación se muestra una colección de mis piezas de arte favoritas y trabajos de diseño gráfico. Pasa el cursor sobre una imagen para ampliarla y luego haz clic para verla más grande."
-      data-fr="Voici une collection de mes pièces d'art préférées et de mes travaux de design graphique. Survolez une image pour l'agrandir, puis cliquez pour la voir en plus grand!"
-      data-pt="Abaixo está uma coleção dos meus trabalhos de arte favoritos e projetos de design gráfico. Passe o cursor sobre uma imagem para ampliá-la e depois clique para vê-la maior!"
-    >
-    Below is a collection of my favorite art pieces and graphic design work. Hover over an image to enlarge it,
-     then click to view it bigger!
-    </p>
-
-    <!-- Horizontal scroll container for art pieces -->
-    <div class="horizontal-scroll">
-      <!-- Art Piece 1 -->
-      <div class="gallery-item" onclick="openModal('artModal1')">
-        <img src="selfportraitpic.pdf" alt="Self Portrait" />
-        <div
-          class="overlay"
-          data-en="Self Portrait"
-          data-es="Autorretrato"
-          data-fr="Autoportrait"
-          data-pt="Auto-Retrato"
-        >
-          <p>Self Portrait</p>
-        </div>
-      </div>
-
-      <!-- Art Piece 2 -->
-      <div class="gallery-item" onclick="openModal('artModal2')">
-        <img src="slothpic.pdf" alt="Sloth" />
-        <div
-          class="overlay"
-          data-en="Sloth"
-          data-es="Pereza"
-          data-fr="Paresse"
-          data-pt="Preguiça"
-        >
-          <p>Sloth</p>
-        </div>
-      </div>
-
-      <!-- Art Piece 3 -->
-      <div class="gallery-item" onclick="openModal('artModal3')">
-        <img src="amor_carnal.pdf" alt="Amor Carnal" />
-        <div
-          class="overlay"
-          data-en="Amor Carnal"
-          data-es="Amor Carnal"
-          data-fr="Amor Carnal"
-          data-pt="Amor Carnal"
-        >
-          <p>Amor Carnal</p>
-        </div>
-      </div>
-
-      <!-- Art Piece 4 -->
-      <div class="gallery-item" onclick="openModal('artModal4')">
-        <img src="sketches.pdf" alt="Multimedia sketches" />
-        <div
-          class="overlay"
-          data-en="Multimedia sketches"
-          data-es="Bocetos Multimedia"
-          data-fr="Esquisses Multimédia"
-          data-pt="Esboços Multimídia"
-        >
-          <p>Multimedia sketches</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- A second horizontal scroll container for the animation clip(s) -->
-    <h3
-      class="clip-header"
-      data-en="Animation / Video Clip"
-      data-es="Animación / Clip de Video"
-      data-fr="Animation / Clip Vidéo"
-      data-pt="Animação / Vídeo Clipe"
-    >
-      Animation / Video Clip
-    </h3>
-    <div class="horizontal-scroll">
-      <div class="gallery-item" onclick="openModal('videoModal1')">
-        <video src="First_animation_ 2.mp4" muted></video>
-        <div
-          class="overlay"
-          data-en="timelapse of animation"
-          data-es="Timelapse de Animación"
-          data-fr="Timelapse d'Animation"
-          data-pt="Timelapse de Animação"
-        >
-          <p>My Animation Clip</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" onclick="openModal('videoModal2')">
-        <video src="skating_@_chicano.mp4" muted></video>
-        <div
-          class="overlay"
-          data-en="Skating @ Chicano Park"
-          data-es="Patinando @ Chicano Park"
-          data-fr="Skate @ Chicano Park"
-          data-pt="Skate @ Chicano Park"
-        >
-          <p>My Animation Clip</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION DIVIDER (Between Art & Design and Contact) -->
-  <div class="section-divider">
-    <img src="hey.png" alt="Section Divider" />
-  </div>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="page-section">
-    <h2
-      data-en="Contact"
-      data-es="Contacto"
-      data-fr="Contact"
-      data-pt="Contato"
-    >
-      Contact
-    </h2>
-    <p>
-      <strong
-        data-en="América Marín"
-        data-es="América Marín"
-        data-fr="América Marín"
-        data-pt="América Marín"
-      >
-        América Marín
-      </strong><br />
-      <span
-        data-en="Phone"
-        data-es="Teléfono"
-        data-fr="Téléphone"
-        data-pt="Telefone"
-      >
-        Phone
-      </span>: (619) 855-4707<br />
-      <span
-        data-en="E-mail"
-        data-es="Correo"
-        data-fr="E-mail"
-        data-pt="E-mail"
-      >
-        E-mail
-      </span>:
-      <a href="mailto:america_marin@brown.edu">america_marin@brown.edu</a><br />
-      <span
-        data-en="LinkedIn"
-        data-es="LinkedIn"
-        data-fr="LinkedIn"
-        data-pt="LinkedIn"
-      >
-        LinkedIn
-      </span>:
-      <a href="https://www.linkedin.com/in/america-marin-65b5b5297" target="_blank">
-        america-marin-65b5b5297
-      </a><br />
-      <span
-        data-en="Website"
-        data-es="Sitio Web"
-        data-fr="Site Web"
-        data-pt="Site"
-      >
-        Website
-      </span>:
-      <a href="https://americamarinn.github.io/americamarinn/" target="_blank">
-        americamarinn.github.io
-      </a>
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p
-      data-en="© 2024 América Marín Reyes. All rights reserved."
-      data-es="© 2024 América Marín Reyes. Todos los derechos reservados."
-      data-fr="© 2024 América Marín Reyes. Tous droits réservés."
-      data-pt="© 2024 América Marín Reyes. Todos os direitos reservados."
-    >
-      © 2024 América Marín Reyes. All rights reserved.
-    </p>
+  <footer role="contentinfo">
+    <div class="container">© <span id="year"></span> América Marín Reyes. All rights reserved.</div>
   </footer>
 
-  <!-- JavaScript for scrolling & modals -->
   <script>
-    // Smoothly scroll to the "about" section when the button is clicked
-    document.getElementById('toggleAbout').addEventListener('click', function() {
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple modal/lightbox functionality
-    function openModal(modalId) {
-      document.getElementById(modalId).style.display = 'block';
-    }
-    function closeModal(modalId) {
-      document.getElementById(modalId).style.display = 'none';
-    }
-
-    function closeFloatingBanner() {
-    document.getElementById('floatingBanner').style.display = 'none';
-    }
-
-    // Basic translation logic
-    const languageSelect = document.getElementById('languageSelect');
-    languageSelect.addEventListener('change', function() {
-      const selectedLang = languageSelect.value; // en, es, fr, pt
-
-      // For each element that has data-en, data-es, etc.
-      document.querySelectorAll('[data-en]').forEach(elem => {
-        const newText = elem.getAttribute(`data-${selectedLang}`);
-        if (newText) {
-          // If it's an input/button, set .value; otherwise .textContent
-          if (
-            elem.tagName.toLowerCase() === 'button' ||
-            elem.tagName.toLowerCase() === 'input' ||
-            elem.tagName.toLowerCase() === 'select' ||
-            elem.tagName.toLowerCase() === 'textarea'
-          ) {
-            elem.value = newText;
-          } else {
-            elem.textContent = newText;
-          }
+    // Smooth in‑page scroll (native CSS can also do this; JS for wider support)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        if (id.length > 1){
+          const el = document.querySelector(id);
+          if (el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
         }
-      });
-    });
+      })
+    })
+
+    // Minimal i18n for headings/nav/CTAs you actually maintain
+    const langSel = document.getElementById('lang');
+    function setLang(lang){
+      document.querySelectorAll('[data-i18n-key]').forEach(el=>{
+        const fallback = el.textContent;
+        const key = 'data-' + lang;
+        const v = el.getAttribute(key);
+        if (v) el.textContent = v; else el.textContent = fallback;
+      })
+      document.documentElement.lang = lang;
+    }
+    langSel.addEventListener('change',()=>setLang(langSel.value));
+    // default already EN
   </script>
-
-  <!-- MODALS -->
-  <!-- Art Modals -->
-  <div id="artModal1" class="modal">
-    <span class="close" onclick="closeModal('artModal1')">&times;</span>
-    <img class="modal-content" src="selfportraitpic.pdf" alt="Self Portrait" />
-    <div
-      class="modal-caption"
-      data-en="Self Portrait - Additional details"
-      data-es="Autorretrato - Detalles adicionales"
-      data-fr="Autoportrait - Détails supplémentaires"
-      data-pt="Auto-Retrato - Detalhes adicionais"
-    >
-      Self Portrait - Additional details
-    </div>
-  </div>
-
-  <div id="artModal2" class="modal">
-    <span class="close" onclick="closeModal('artModal2')">&times;</span>
-    <img class="modal-content" src="slothpic.pdf" alt="Sloth" />
-    <div
-      class="modal-caption"
-      data-en="Sloth - Additional details"
-      data-es="Pereza - Detalles adicionales"
-      data-fr="Paresse - Détails supplémentaires"
-      data-pt="Preguiça - Detalhes adicionais"
-    >
-      Sloth - Additional details
-    </div>
-  </div>
-
-  <div id="artModal3" class="modal">
-    <span class="close" onclick="closeModal('artModal3')">&times;</span>
-    <img class="modal-content" src="amor_carnal.pdf" alt="Amor Carnal" />
-    <div
-      class="modal-caption"
-      data-en="Amor Carnal - Additional details"
-      data-es="Amor Carnal - Detalles adicionales"
-      data-fr="Amor Carnal - Détails supplémentaires"
-      data-pt="Amor Carnal - Detalhes adicionais"
-    >
-      Amor Carnal - Additional details
-    </div>
-  </div>
-
-  <div id="artModal4" class="modal">
-    <span class="close" onclick="closeModal('artModal4')">&times;</span>
-    <img class="modal-content" src="sketches.pdf" alt="Multimedia sketches" />
-    <div
-      class="modal-caption"
-      data-en="Multimedia sketches - Additional details"
-      data-es="Bocetos Multimedia - Detalles adicionales"
-      data-fr="Esquisses Multimédia - Détails supplémentaires"
-      data-pt="Esboços Multimídia - Detalhes adicionais"
-    >
-      Multimedia sketches - Additional details
-    </div>
-  </div>
-
-  <!-- Video Modals -->
-  <div id="videoModal1" class="modal">
-    <span class="close" onclick="closeModal('videoModal1')">&times;</span>
-    <video class="modal-content" controls>
-      <source src="First_animation_ 2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div
-      class="modal-caption"
-      data-en="Animation Clip - Timelapse of animation"
-      data-es="Clip de Animación - Timelapse"
-      data-fr="Clip d'Animation - Timelapse"
-      data-pt="Clipe de Animação - Timelapse"
-    >
-      Animation Clip - Timelapse of animation
-    </div>
-  </div>
-
-  <div id="videoModal2" class="modal">
-    <span class="close" onclick="closeModal('videoModal2')">&times;</span>
-    <video class="modal-content" controls>
-      <source src="skating_@_chicano.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div
-      class="modal-caption"
-      data-en="Animation Clip - Skating @ Chicano Park"
-      data-es="Clip de Animación - Patinando @ Chicano Park"
-      data-fr="Clip d'Animation - Skate @ Chicano Park"
-      data-pt="Clipe de Animação - Skate @ Chicano Park"
-    >
-      Animation Clip - Skating @ Chicano Park
-    </div>
-  </div>
 </body>
 </html>
