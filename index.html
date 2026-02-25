@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  
+
   <!-- Open Graph (nice link previews) -->
   <meta property="og:title" content="América Marín Reyes — Portfolio" />
   <meta property="og:description" content="CS × Design × Research at Brown — projects, art, and case studies." />
@@ -72,7 +72,7 @@
     .pills{display:flex;gap:8px;flex-wrap:wrap}
     .pill{background:var(--pill);padding:6px 10px;border-radius:999px;font-size:.8rem}
 
-    /* DUAL‑TRACK HUB */
+    /* DUAL-TRACK HUB */
     .hub{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .hub .panel{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:18px}
     .panel h3{margin:0 0 6px}
@@ -92,6 +92,16 @@
 
     /* FOOTER */
     footer{border-top:1px solid var(--border);padding:18px 0;margin-top:24px;color:var(--muted);font-size:.9rem}
+
+    /* Animation Profile media (added) */
+    .media{
+      aspect-ratio:16/10;
+      width:100%;
+      border-bottom:1px solid var(--border);
+      background:#000;
+      object-fit:cover;
+    }
+    .card video.media{display:block}
 
     /* RESPONSIVE */
     @media (max-width: 960px){
@@ -118,6 +128,10 @@
         <a href="#highlights" data-i18n-key="nav_highlights" data-en="Highlights" data-es="Destacados" data-fr="À la une" data-pt="Destaques">Highlights</a>
         <a href="#engineering" data-i18n-key="nav_engineering" data-en="Engineering" data-es="Ingeniería" data-fr="Ingénierie" data-pt="Engenharia">Engineering</a>
         <a href="#art" data-i18n-key="nav_art" data-en="Art & Design" data-es="Arte y Diseño" data-fr="Art & Design" data-pt="Arte & Design">Art & Design</a>
+
+        <!-- Added: Animation Profile link -->
+        <a href="#animation-profile" data-i18n-key="nav_animation" data-en="Animation" data-es="Animación" data-fr="Animation" data-pt="Animação">Animation</a>
+
         <a href="#research" data-i18n-key="nav_research" data-en="Research" data-es="Investigación" data-fr="Recherche" data-pt="Pesquisa">Research</a>
         <a href="#about" data-i18n-key="nav_about" data-en="About" data-es="Sobre mí" data-fr="À propos" data-pt="Sobre">About</a>
         <a href="#contact" data-i18n-key="nav_contact" data-en="Contact" data-es="Contacto" data-fr="Contact" data-pt="Contato">Contact</a>
@@ -148,13 +162,13 @@
             <a class="btn" href="https://www.linkedin.com/in/america-marin-65b5b5297" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
             <a class="btn" href="https://americamarinn.github.io/americamarinn/" target="_blank" rel="noopener" aria-label="Website archive">Archive</a>
           </div>
-          
+
           <!-- QUICK FACTS -->
           <div class="facts" aria-label="Quick facts">
             <div class="fact">Brown University · CS & Linguistic Anthropology · <strong>Spring 2026</strong></div>
             <div class="fact">Based in Providence / San Diego</div>
-            <div class="fact">Roles: SWE · Front‑End · Design Technologist</div>
-            <div class="fact">Testing: Playwright, Jest · Accessibility‑minded</div>
+            <div class="fact">Roles: SWE · Front-End · Design Technologist</div>
+            <div class="fact">Testing: Playwright, Jest · Accessibility-minded</div>
           </div>
         </div>
         <div>
@@ -177,7 +191,7 @@
             <div class="pills">
               <span class="pill">Maya</span><span class="pill">Procreate</span><span class="pill">Animation</span>
             </div>
-            <p style="margin-top:10px"><a class="btn" href="turntable_1080p.mp4" target="_blank" rel="noopener">Turntable (MP4)</a>
+            <p style="margin-top:10px"><a class="btn" href="turntable_1080p.mp4" target="_blank" rel="noopener">Turntable (MP4)</a></p>
           </div>
         </article>
         <!-- HONOR Pilates highlight -->
@@ -207,7 +221,7 @@
       </div>
     </section>
 
-    <!-- DUAL‑TRACK HUBS -->
+    <!-- DUAL-TRACK HUBS -->
     <section class="section" aria-labelledby="hubs-title">
       <h2 id="hubs-title">Engineering × Art & Design</h2>
       <div class="hub">
@@ -248,6 +262,14 @@
           <h3 id="art-title">Art & Design</h3>
           <p class="subtitle" style="margin:4px 0 10px">Illustration · Branding · Motion</p>
           <div class="grid">
+            <!-- Added: Animation Profile tile -->
+            <article class="tile">
+              <h4>Animation Profile</h4>
+              <div class="meta">Motion · Modeling · Lighting</div>
+              <p>Selected shots + turntables showcasing modeling, shading, and lighting.</p>
+              <p><a class="btn" href="#animation-profile">View</a></p>
+            </article>
+
             <article class="tile">
               <h4>HONOR Pilates — Brand & Web</h4>
               <div class="meta">Branding · Squarespace</div>
@@ -257,7 +279,7 @@
             <article class="tile">
               <h4>Entre Mundos Exhibition</h4>
               <div class="meta">Exhibit · Curation</div>
-              <p>Showcased multi‑media work exploring femininity and identity in surrealist compositions.</p>
+              <p>Showcased multi-media work exploring femininity and identity in surrealist compositions.</p>
               <p>
                 <a class="btn"
                    href="https://github.com/americamarinn/americamarinn/tree/main/art%20folder"
@@ -268,7 +290,7 @@
               <h4>Ruff Night — Animation Short</h4>
               <div class="meta">Modeling · Shading · Lighting</div>
               <p>Storyboard, modeling, shading, lighting & rendering for narrative characters.</p>
-              <p><a class="btn" href="#" target="_blank">Teaser</a></p>
+              <p><a class="btn" href="#animation-profile">View in Animation</a></p>
             </article>
             <article class="tile">
               <h4>Brown cs200 Newsletters</h4>
@@ -281,6 +303,58 @@
       </div>
     </section>
 
+    <!-- Added: ANIMATION PROFILE SECTION -->
+    <section id="animation-profile" class="section" aria-labelledby="animation-title">
+      <h2 id="animation-title">Animation Profile</h2>
+      <p class="subtitle" style="margin:4px 0 12px">
+        A small selection of motion + renders (modeling, shading, lighting).
+      </p>
+
+      <div class="cards">
+        <!-- Video 1 -->
+        <article class="card">
+          <video class="media" controls preload="metadata">
+            <source src="anim_vid_example.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+            <h3>Shot Study — Motion Test</h3>
+            <p>Timing, camera movement, and lighting pass exploration.</p>
+            <div class="pills">
+              <span class="pill">Animation</span><span class="pill">Lighting</span><span class="pill">Render</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Video 2 -->
+        <article class="card">
+          <video class="media" controls preload="metadata">
+            <source src="shot30.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+            <h3>Shot 30 — Sequence Clip</h3>
+            <p>Character + environment pass with shading and final output.</p>
+            <div class="pills">
+              <span class="pill">Shading</span><span class="pill">Modeling</span><span class="pill">Compositing</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Still frame (use webp/jpg, not tif) -->
+        <article class="card">
+          <img src="amarin11_light_final_1_0001.webp" class="media" alt="Lighting still frame render" loading="lazy" />
+          <div class="card-body">
+            <h3>Lighting Still — Frame Render</h3>
+            <p>Key + fill balancing and material response in final lighting.</p>
+            <div class="pills">
+              <span class="pill">Lighting</span><span class="pill">Materials</span><span class="pill">Lookdev</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- RESEARCH STRIP -->
     <section id="research" class="section" aria-labelledby="research-title">
       <h2 id="research-title">Research</h2>
@@ -289,7 +363,7 @@
           <div>
             <h4>Race, Language & Belonging</h4>
             <div class="meta">Anthropology RA · Abstract + Slides</div>
-            <p>Bibliographic research on science, statehood, and Indigenous counter‑narratives.</p>
+            <p>Bibliographic research on science, statehood, and Indigenous counter-narratives.</p>
             <p><a class="btn" href="#" target="_blank">Read</a></p>
           </div>
         </article>
@@ -338,7 +412,7 @@
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Smooth in‑page scroll (native CSS can also do this; JS for wider support)
+    // Smooth in-page scroll (native CSS can also do this; JS for wider support)
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', (e)=>{
         const id = a.getAttribute('href');
